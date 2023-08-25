@@ -1,4 +1,6 @@
 import'package:flutter/material.dart';
+import 'package:wojac_app/const/Colors.dart';
+import 'package:wojac_app/const/Styels.dart';
 
 class TabObject extends StatelessWidget {
   const TabObject({super.key, required this.data, required this.name, });
@@ -17,7 +19,8 @@ final String data;
               child: Image.asset(name,)),
           Padding(
             padding: const EdgeInsets.only(left: 12,top: 5),
-            child: Text(data),
+            child: Text(data,
+             style: Styles.textStyle18,),
           )
         ],
       ),

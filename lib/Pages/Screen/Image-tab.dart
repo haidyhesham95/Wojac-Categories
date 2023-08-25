@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:wojac_app/const/Colors.dart';
+import 'package:wojac_app/const/Styels.dart';
 
 class ImageTab extends StatelessWidget {
   const ImageTab({super.key});
@@ -26,7 +28,8 @@ class ImageTab extends StatelessWidget {
           SizedBox(height: 15,),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('WOJAK'),
+            child: Text('WOJAK',
+              style: Styles.textStyle18),
 
           ),
           Divider(),

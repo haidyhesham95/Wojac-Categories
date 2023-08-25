@@ -35,13 +35,13 @@ class _TextSearchState extends State<TextSearch> {
       keyboardType:TextInputType.text,
       decoration: InputDecoration(
         hintText: 'Search',
-        prefixIcon:Icon(Icons.search,color: kGround,),
+        prefixIcon:Icon(Icons.search,color: kgreen,),
         suffixIcon: GestureDetector(
           onTap: (){
             searchTextController.clear();
             FocusScope.of(context).unfocus();
           },
-          child: Icon(Icons.close,color: kGround,),
+          child: Icon(Icons.close,color: kgreen,),
         ),
         fillColor: kColor,
         focusedBorder: OutlineInputBorder(

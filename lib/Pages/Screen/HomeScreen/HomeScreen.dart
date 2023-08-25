@@ -5,6 +5,8 @@ import 'package:wojac_app/Pages/Screen/Search/TextSearch.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 
+import '../Search/ListCard.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -41,12 +43,14 @@ class HomeScreen extends StatelessWidget {
           TextSearch(),
           Divider(
             height: 20,
-            color: Colors.black45,
+            color: kColor
           ),
           Text(
             'Wojak Categories:',
-            style: Styles.textStyle25,
+           style: Styles.textStyle25,
           ),
+          SizedBox(height: 20,),
+          ListCard(),
 
         ],
       ),

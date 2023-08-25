@@ -19,11 +19,11 @@ class MainScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: VerticalTabs(
-                  selectedTabBackgroundColor:  kColor,
+                  selectedTabBackgroundColor:  kgreen,
                   tabBackgroundColor: kGround,
-
-                  indicatorColor: Colors.blueGrey,
+                  indicatorColor: kgreen,
                   tabsWidth: size.height*0.3,
+
                   tabs: const [
                     Tab(
                       child:
