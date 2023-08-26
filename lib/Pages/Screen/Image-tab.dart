@@ -9,30 +9,28 @@ class ImageTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: [
           Center(
             child: Container(
-              width: 100,
-              height: 100,
+              width: 150,
+              height: 150,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
                   fit: BoxFit.fill,
-                  image: AssetImage('assets/images/img (1).png')
+                  image: AssetImage('assets/images/img (1).png',)
                 )
               ),
             ),
           ),
-          SizedBox(height: 15,),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('WOJAK',
-              style: Styles.textStyle18),
+          SizedBox(height: 18,),
+          Text('WOJAK',
+            style: Styles.textStyle18),
+          SizedBox(height: 18,),
 
-          ),
-          Divider(),
+
         ],
       ),
     );
