@@ -25,13 +25,14 @@ class HomeScreen extends StatelessWidget {
             height: 20,
             color: kColor
           ),
+          SizedBox(height: 15,),
           Text(
             'Wojak Categories:',
-           style: Styles.textStyle25,
+           style: Styles.textStyle20,
           ),
           SizedBox(height: 20,),
           ListCard(),
-          SizedBox(height: 15,),
+          SizedBox(height: 20,),
           Text(
             'Some random wojaks:',
             style: Styles.textStyle20,

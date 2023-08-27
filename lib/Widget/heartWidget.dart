@@ -8,9 +8,12 @@ class HeartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
+      height: 30,
+     width: 30,
      decoration: BoxDecoration(
        borderRadius: BorderRadius.circular(8),
-       color:kColor.withOpacity(0.1) ,
+       color:kWhite,
+
      ),
       child: IconButton(
         style: IconButton.styleFrom(
@@ -18,7 +21,7 @@ class HeartWidget extends StatelessWidget {
 
         ),
         onPressed: (){},
-        icon: Icon(Icons.favorite,color:Colors.white,),),
+        icon: Icon(Icons.favorite,color:Colors.white,size: 17,),),
     );
   }
 }

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:vertical_tabs_flutter/vertical_tabs.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wojac_app/const/Colors.dart';
-import '../../Widget/TabObject.dart';
+
+import '../../../Widget/TabObject.dart';
 import 'Image-tab.dart';
+
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});

@@ -16,7 +16,7 @@ class ListWojacFav extends StatelessWidget {
         child: ListView.builder(
              shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: 5,
+            itemCount: 8,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.only(
@@ -48,15 +48,12 @@ class ListWojacFav extends StatelessWidget {
 
                           Positioned(
                             top: 5,
-                            right: 10,
+                            right: 5,
                             child: HeartWidget(),
                           ),
 
                         ],),
 
-                          SizedBox(
-                            height: 10,
-                          ),
                           Expanded(
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
