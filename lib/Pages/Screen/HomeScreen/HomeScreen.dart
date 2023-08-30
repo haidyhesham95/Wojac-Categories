@@ -13,35 +13,40 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size=MediaQuery.of(context).size;
-    return Container(
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(20),
-      color: kGround,
-      child:  Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextSearch(),
-          Divider(
-            height: 20,
-            color: kColor
-          ),
-          SizedBox(height: 15,),
-          Text(
-            'Wojak Categories:',
-           style: Styles.textStyle20,
-          ),
-          SizedBox(height: 20,),
-          ListCard(),
-          SizedBox(height: 20,),
-          Text(
-            'Some random wojaks:',
-            style: Styles.textStyle20,
-          ),
-          SizedBox(height: 20,),
-          ListWojacFav(),
+    return
 
-        ],
-      ),
+       Container(
+        margin: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(20),
+        color: kGround,
+        child:  SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TextSearch(),
+              Divider(
+                height: 20,
+                color: kColor
+              ),
+              SizedBox(height: 15,),
+              Text(
+                'Wojak Categories:',
+               style: Styles.textStyle20,
+              ),
+              SizedBox(height: 20,),
+              ListCard(),
+              SizedBox(height: 20,),
+              Text(
+                'Some random wojaks:',
+                style: Styles.textStyle20,
+              ),
+              SizedBox(height: 20,),
+              ListWojacFav(),
+
+            ],
+          ),
+        ),
+
     );
 
   }

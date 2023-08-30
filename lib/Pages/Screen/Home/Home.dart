@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wojac_app/Pages/Screen/Details/Details.dart';
 
 import '../HomeScreen/Main-Screen.dart';
 
@@ -14,8 +15,11 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (MediaQuery.of(context).size.width >= 640)
-              Expanded(child: MainScreen()),
-            //Expanded(child: _screens[_selectedIndex])
+              Expanded(child: MainScreen()
+              ),
+
+
+
           ],
         ),
       ),

@@ -5,8 +5,6 @@ import 'package:wojac_app/const/Colors.dart';
 
 import '../../../Widget/TabObject.dart';
 import 'Image-tab.dart';
-
-
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
   @override
