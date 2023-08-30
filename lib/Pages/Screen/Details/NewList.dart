@@ -1,42 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:wojac_app/const/Colors.dart';
-import 'dart:ui_web';
-import '../../../Widget/heartWidget.dart';
-import '../../../const/Styels.dart';
-import '../Details/Details.dart';
 
-class ListWojacFav extends StatelessWidget {
-   ListWojacFav({super.key});
-  final yourScrollController = ScrollController();
+import '../../../Widget/heartWidget.dart';
+import '../../../const/Colors.dart';
+import '../../../const/Styels.dart';
+
+class NewList extends StatelessWidget {
+  const NewList({super.key});
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => Details(
-
-              )),
-        );
-      },
-      child: GridView.builder(
+    return  GridView.builder(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         itemCount: 8,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-            crossAxisSpacing: 20,
-            childAspectRatio: 3/2,
-            mainAxisSpacing: 30,
-          ),
-       // controller:yourScrollController,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 4,
+          crossAxisSpacing: 20,
+          childAspectRatio: 3/1.7,
+          mainAxisSpacing: 30,
+        ),
+
         itemBuilder: (context,index){
           return  Padding(
-            padding: const EdgeInsets.only(left: 22,),
+            padding: const EdgeInsets.only(left: 20,right: 20,),
             child: Container(
+
               decoration: BoxDecoration(
                 color: kWhite,
                 borderRadius: BorderRadius.circular(15),
@@ -48,7 +37,7 @@ class ListWojacFav extends StatelessWidget {
                       children: [
                         Container(
                             height: size.height*0.20,
-                            width: size.width*0.20,
+                            width: size.width*0.25,
                             decoration: BoxDecoration(
                                 color: kGround,
                                 borderRadius: BorderRadius.only(
@@ -110,8 +99,6 @@ class ListWojacFav extends StatelessWidget {
         }
 
 
-      ),
     );
   }
 }
-
