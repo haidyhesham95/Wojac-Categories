@@ -53,8 +53,8 @@ class NewList extends StatelessWidget {
                             )),
 
                         Positioned(
-                          top: 5,
-                          right: 5,
+                          top: 6,
+                          right: 9,
                           child: HeartWidget(),
                         ),
 

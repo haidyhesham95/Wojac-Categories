@@ -28,7 +28,7 @@ class Details extends StatelessWidget {
                     Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 15),
+                          padding: const EdgeInsets.only(left: 15,top: 120),
                           child: ImgCount(),
                         ),
                         SizedBox(height: 15,),
@@ -36,15 +36,15 @@ class Details extends StatelessWidget {
 
                           children: [
                             TexCoun(data: 'Wojak',),
-                            SizedBox(width: 8)    ,
+                            SizedBox(width: 17)    ,
                             TexCoun(data: 'Wojak',),
-                            SizedBox(width: 8)    ,
+                            SizedBox(width: 17)    ,
                             TexCoun(data: 'Wojak',),
-                            SizedBox(width: 8)    ,
+                            SizedBox(width: 17)    ,
                             TexCoun(data: 'Wojak',),
-                            SizedBox(width: 8)    ,
+                            SizedBox(width: 17)    ,
                             TexCoun(data: 'Wojak',),
-                            SizedBox(width: 8)    ,
+                            SizedBox(width: 18)    ,
                             TexCoun(data: 'Wojak',),
                           ],
                         ),
@@ -54,32 +54,57 @@ class Details extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          height: size.height*0.20,
+                          height: size.height*0.12,
                             width: size.width*0.50,
                             child: TextSearch(),
                         ),
-                        Row(
-                          children: [
-                            Button(data: 'PNG',icon: Icons.arrow_circle_down,onPressed: (){},),
-                            SizedBox(width: 70,),
-                            Button(data: 'PNG',icon: Icons.photo,onPressed: (){},),
-                          ],
+                      Container(
+                        height: size.height*0.50,
+                        width: size.width*0.50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(
+                              width: 2,
+                              color: kgreen,
+                            )
                         ),
-                        SizedBox(height: 50,),
-                        Row(
-                          children: [
-                            Button(data: 'Favorite',icon: Icons.favorite,onPressed: (){},),
-                            SizedBox(width: 70,),
-                            Button(data: 'Share',icon: Icons.share,onPressed: (){},),
-                          ],
-                        ),
-                        SizedBox(height: 50,),
-                        BorderCount(),
+                       child: Column(
+                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15,left: 200),
+                            child: Row(
+                              children: [
+                                Button(data: 'PNG',icon: Icons.arrow_circle_down,onPressed: (){},),
+                                SizedBox(width: 100,),
+                                Button(data: 'PNG',icon: Icons.photo,onPressed: (){},),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 40,),
+
+                          Padding(
+                            padding: const EdgeInsets.only(top: 15,left: 200),
+                            child: Row(
+                              children: [
+                                Button(data: 'Favorite',icon: Icons.favorite,onPressed: (){},),
+                                SizedBox(width: 100,),
+                                Button(data: 'Share',icon: Icons.share,onPressed: (){},),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 50,),
+
+                          BorderCount()
+                        ],
+                      ),
+                    )
                       ],
                     ),
                   ],
             ),
-                SizedBox(height: 50,),
+                SizedBox(height: 70,),
                 NewList(),
       ]
       ),

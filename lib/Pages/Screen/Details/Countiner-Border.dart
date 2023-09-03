@@ -16,8 +16,8 @@ class BorderCount extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
           color: kGround,
           border: Border.all(
-            width: 0.5,
-            color: kgreen,
+            width: 0.7,
+            color: kWhite,
           )
       ),
       child: Padding(
@@ -37,26 +37,28 @@ class BorderCount extends StatelessWidget {
                 children: [
                   Text('Ahmed Zone',style: Styles.textStyle15,),
                   SizedBox(height: 5,),
-                  Text('View all 3.125 images',style: TextStyle(color: Colors.white),),
+                  Text('View all ',style: TextStyle(color: Colors.white),),
                 ],
               ),
             ),
-            SizedBox(width: 210),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Container(
+                height: size.height*0.045,
+                width: size.width*0.065,
+                child: TextButton(
+                    onPressed: (){},
+                    style: TextButton.styleFrom(
+                      backgroundColor: kgreen,
+                    ),
+                    child:  Text(
+                      'Follow',style:Styles.textStyle18,
 
-            Container(
-              height: size.height*0.045,
-              width: size.width*0.065,
-              child: TextButton(
-                  onPressed: (){},
-                  style: TextButton.styleFrom(
-                    backgroundColor: kgreen,
-                  ),
-                  child:  Text(
-                    'Follow',style:Styles.textStyle18,
+                    )
+                ),
 
-                  )
               ),
-
             ),
           ],
         ),

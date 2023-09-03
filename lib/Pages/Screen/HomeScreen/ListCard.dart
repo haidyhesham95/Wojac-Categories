@@ -13,7 +13,7 @@ class ListCard extends StatelessWidget {
     return Container(
       height: size.height*0.26,
       child: RawScrollbar(
-        thumbColor: kColor,
+        thumbColor: kWhite,
         trackVisibility: true,
         controller: yourScrollController,
         thickness: 8,

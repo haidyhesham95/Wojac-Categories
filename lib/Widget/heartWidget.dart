@@ -12,7 +12,7 @@ class HeartWidget extends StatelessWidget {
      width: 30,
      decoration: BoxDecoration(
        borderRadius: BorderRadius.circular(8),
-       color:kWhite,
+       color:kgreen,
 
      ),
       child: IconButton(

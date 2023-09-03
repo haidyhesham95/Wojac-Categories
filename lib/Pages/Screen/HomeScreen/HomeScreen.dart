@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
               TextSearch(),
               Divider(
                 height: 20,
-                color: kColor
+                color: kWhite
               ),
               SizedBox(height: 15,),
               Text(

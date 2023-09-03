@@ -35,27 +35,27 @@ class _TextSearchState extends State<TextSearch> {
       keyboardType:TextInputType.text,
       decoration: InputDecoration(
         hintText: 'Search',
-        hintStyle: TextStyle(color: Colors.white),
-        prefixIcon:Icon(Icons.search,color: Colors.white),
+        hintStyle: TextStyle(color: kgreen),
+        prefixIcon:Icon(Icons.search,color: kgreen),
         suffixIcon: GestureDetector(
           onTap: (){
             searchTextController.clear();
             FocusScope.of(context).unfocus();
           },
-          child: Icon(Icons.close,color: Colors.white),
+          child: Icon(Icons.close,color: kgreen),
         ),
-        fillColor: kColor,
+        fillColor: kWhite,
         focusedBorder: OutlineInputBorder(
           borderRadius:  BorderRadius.circular(18),
           borderSide: BorderSide(
-            color: kColor,
+            color: kgreen,
             width: 1.5,
           ),
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(18),
             borderSide: BorderSide(
-              color: kColor,
+              color: kgreen,
               width:1.5,
             )
         ),

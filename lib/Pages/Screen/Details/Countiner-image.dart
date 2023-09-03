@@ -12,7 +12,7 @@ class ImgCount extends StatelessWidget {
       height: size.height*0.50,
       width: size.width*0.30,
       decoration: BoxDecoration(
-        color: kColor,
+        color: kWhite,
         borderRadius: BorderRadius.circular(15),
       ),
       child: Image.asset(
