@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/Details/Button.dart';
 import 'Countiner-Border.dart';
 import 'Countiner-image.dart';
@@ -12,14 +13,15 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size=MediaQuery.of(context).size;
+
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Container(
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(20),
         color: kGround,
+
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding:  EdgeInsets.all(12.w),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -28,29 +30,38 @@ class Details extends StatelessWidget {
                     Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 15,top: 120),
+                          padding:  EdgeInsets.only(
+                              left: 15.w,
+                              top: 100.h
+                          ),
                           child: ImgCount(),
                         ),
-                        SizedBox(height: 15,),
-                        Row(
+                        SizedBox(height: 8.h,),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 15.w,
+                          ),
+                          child: Container(
+                            constraints: BoxConstraints(
+                              maxWidth:size.width*0.30,
 
-                          children: [
-                            TexCoun(data: 'Wojak',),
-                            SizedBox(width: 17)    ,
-                            TexCoun(data: 'Wojak',),
-                            SizedBox(width: 17)    ,
-                            TexCoun(data: 'Wojak',),
-                            SizedBox(width: 17)    ,
-                            TexCoun(data: 'Wojak',),
-                            SizedBox(width: 17)    ,
-                            TexCoun(data: 'Wojak',),
-                            SizedBox(width: 18)    ,
-                            TexCoun(data: 'Wojak',),
-                          ],
+                            ),
+                            child: Wrap(
+                              spacing: 2.5.w,
+                              runSpacing: 5.h,
+                              children: List.generate(
+                                         9,
+                                      (index) =>  TexCoun(
+                                        data: 'Wojak',
+                                        alignment: TextAlign.center,
+                                      )
+                              )
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                    const SizedBox(width: 60,),
+                     SizedBox(width: 12.w,),
                     Column(
                       children: [
                         Container(

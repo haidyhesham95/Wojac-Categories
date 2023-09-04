@@ -73,7 +73,7 @@ class NewList extends StatelessWidget {
                             radius: 13,
                           ),
                           SizedBox(width: 8,),
-                          Text('Wojak'),
+                          Text('Wojak12'),
                         ],
                       ),
                       Container(
