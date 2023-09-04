@@ -16,7 +16,6 @@ class HomeScreen extends StatelessWidget {
     return
 
        Container(
-        margin: const EdgeInsets.all(10),
         padding: const EdgeInsets.all(20),
         color: kGround,
         child:  SingleChildScrollView(

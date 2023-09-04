@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'dart:ui_web';
 import '../../../Widget/heartWidget.dart';
@@ -25,7 +26,7 @@ class ListWojacFav extends StatelessWidget {
       child: GridView.builder(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
-        itemCount: 8,
+        itemCount: 10,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 4,
             crossAxisSpacing: 20,
@@ -77,26 +78,40 @@ class ListWojacFav extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Row(
+                       Row(
                         children: [
                           CircleAvatar(
                             backgroundImage: AssetImage('assets/images/profile.png'),
-                            radius: 13,
+                            radius: 12.r,
                           ),
-                          SizedBox(width: 8,),
-                          Text('Wojak'),
+                          SizedBox(width: 2.w,),
+                          Container(
+                            constraints: BoxConstraints(
+                              maxWidth: size.width*0.20 - ( 12.r * 2  + 45.w )
+                            ),
+                            child: Text(
+                              'Wojak'*12,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                       Container(
-                        height:18,
-                        width: 80,
+                        height:20.h,
+                        width: 30.w,
                         decoration: BoxDecoration(
                             color: kGround,
-                            borderRadius: BorderRadius.circular(5)
+                            borderRadius: BorderRadius.circular(10)
                         ),
                         child: TextButton(
                             onPressed: () { },
-                            child: Text('Follow',style: Styles.textStyle10,)),
+                            child: Text('Follow',
+                              style: Styles.textStyle10,)),
                       ),
 
                     ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'Colors.dart';
 
@@ -21,9 +23,9 @@ abstract class Styles {
       color: Colors.white,
       fontSize: 20
   );
-  static const textStyle10= TextStyle(
+  static TextStyle textStyle10= TextStyle(
       color: Colors.white,
-      fontSize: 10
+      fontSize: 2.5.sp
   );
 
 
@@ -31,4 +33,13 @@ abstract class Styles {
 
 }
 
+
+
 const TextStyle textStyle = TextStyle();
+
+//quick sand font
+TextStyle fontStyle(FontWeight weight) {
+  return GoogleFonts.quicksand(
+      fontWeight: weight
+  );
+}
