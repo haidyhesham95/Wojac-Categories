@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 import 'dart:html';
@@ -17,17 +19,29 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        scrollbarTheme: ScrollbarThemeData(
-          thumbColor: MaterialStateProperty.all(kWhite)
-            
-          
-        )
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_,context2) {
+        return MaterialApp(
+            theme: ThemeData(
+              scaffoldBackgroundColor: kGround,
+                scrollbarTheme: ScrollbarThemeData(
+                    thumbColor: MaterialStateProperty.all(kWhite)
 
-      ),
-        debugShowCheckedModeBanner: false,
-        home: const Home());
+
+                ),
+              textTheme: GoogleFonts.quicksandTextTheme(
+                Theme.of(context).textTheme
+              )
+
+            ),
+
+            debugShowCheckedModeBanner: false,
+            home: const Home());
+      },
+    );
   }
 }
 

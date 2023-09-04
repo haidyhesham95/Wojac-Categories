@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
+
 
 
 class HeartWidget extends StatelessWidget {
@@ -8,20 +10,26 @@ class HeartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 30,
-     width: 30,
+      height: 25.h,
+      width: 7.w,
      decoration: BoxDecoration(
        borderRadius: BorderRadius.circular(8),
-       color:kgreen,
+       color:kWhite.withOpacity(.8),
 
      ),
       child: IconButton(
         style: IconButton.styleFrom(
-          shape: CircleBorder(),
+          shape: const CircleBorder(),
 
         ),
-        onPressed: (){},
-        icon: Icon(Icons.favorite,color:Colors.white,size: 17,),),
+        onPressed: (){
+
+        },
+        icon: Icon(
+          Icons.favorite,
+          color:Colors.red,
+          size: 3.7.w,
+        ),),
     );
   }
 }

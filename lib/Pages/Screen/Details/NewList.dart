@@ -81,11 +81,15 @@ class NewList extends StatelessWidget {
                         width: 80,
                         decoration: BoxDecoration(
                             color: kGround,
-                            borderRadius: BorderRadius.circular(5)
+                            borderRadius: BorderRadius.circular(10)
                         ),
                         child: TextButton(
                             onPressed: () { },
-                            child: Text('Follow',style: Styles.textStyle10,)),
+                            child: Text(
+                              'Follow',
+                              style: Styles.textStyle10,
+
+                            )),
                       ),
 
                     ],

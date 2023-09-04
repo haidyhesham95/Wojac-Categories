@@ -3,6 +3,7 @@ import 'package:vertical_tabs_flutter/vertical_tabs.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wojac_app/const/Colors.dart';
 
+
 import '../../../Widget/TabObject.dart';
 import 'Image-tab.dart';
 class MainScreen extends StatelessWidget {
@@ -12,72 +13,76 @@ class MainScreen extends StatelessWidget {
     var size=MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: kGround,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(
-                child: VerticalTabs(
-                  selectedTabBackgroundColor:  kgreen,
-                  tabBackgroundColor: kGround,
-                  indicatorColor: kgreen,
-                  tabsWidth: size.height*0.3,
+            Container(
 
-                  tabs: const [
-                    Tab(
-                      child:
-                      ImageTab(),
-                    ),
-                    Tab(
-                      child:
-                      TabObject(
-                        data: 'Community',
-                        name: 'assets/images/community.png',
+              child: Expanded(
+                  child: VerticalTabs(
+                    selectedTabBackgroundColor:  kgreen,
+                    tabBackgroundColor: kGround,
+                    indicatorColor: kgreen,
+                    tabsWidth: size.height*0.3,
 
+                    tabs: const [
+                      Tab(
+                        child:
+                        ImageTab(),
                       ),
-                    ),
-                    Tab(
-                      child:
-                      TabObject(
-                        data: 'Top',
-                        name: 'assets/images/top.png',
+                      Tab(
+                        child:
+                        TabObject(
+                          data: 'Community',
+                          name: 'assets/images/community.png',
 
+                        ),
                       ),
-                    ),
-                    Tab(
-                      child:
-                      TabObject(
-                        data: 'Profile',
-                        name: 'assets/images/profile.png',
+                      Tab(
+                        child:
+                        TabObject(
+                          data: 'Top',
+                          name: 'assets/images/top.png',
 
-
+                        ),
                       ),
-                    ),
-                    Tab(
-                      child:
-                      TabObject(
-                        data: 'About',
-                        name: 'assets/images/about.png',
+                      Tab(
+                        child:
+                        TabObject(
+                          data: 'Profile',
+                          name: 'assets/images/profile.png',
 
+
+                        ),
                       ),
-                    ),
+                      Tab(
+                        child:
+                        TabObject(
+                          data: 'About',
+                          name: 'assets/images/about.png',
 
+                        ),
+                      ),
+
+
+
+                    ],
+                    contents: [
+
+                      HomeScreen(),
+                      tabsContent('Wojak'),
+                      tabsContent('Wojak'),
+                      tabsContent('Wojak'),
+                      tabsContent('Wojak'),
 
 
                   ],
-                  contents: [
 
-                    HomeScreen(),
-                    tabsContent('Wojak'),
-                    tabsContent('Wojak'),
-                    tabsContent('Wojak'),
-                    tabsContent('Wojak'),
-
-
-                ],
-
-                )
+                  )
+              ),
             )
           ],
         ),
