@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:like_button/like_button.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 
@@ -17,19 +18,16 @@ class HeartWidget extends StatelessWidget {
        color:kWhite.withOpacity(.8),
 
      ),
-      child: IconButton(
-        style: IconButton.styleFrom(
-          shape: const CircleBorder(),
+      child: Align(
+        alignment: Alignment.center,
+        child: LikeButton(
+         size: 5.w,
+         likeCountAnimationDuration: Duration(
+           microseconds: 500
+          ),
 
         ),
-        onPressed: (){
-
-        },
-        icon: Icon(
-          Icons.favorite,
-          color:Colors.red,
-          size: 3.7.w,
-        ),),
+      ),
     );
   }
 }

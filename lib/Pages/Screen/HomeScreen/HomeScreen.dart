@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 
+import '../Details/Details.dart';
 import 'ListCard.dart';
 import 'ListWojakFavourit.dart';
 import 'Search/TextSearch.dart';
@@ -40,7 +41,17 @@ class HomeScreen extends StatelessWidget {
                 style: Styles.textStyle20,
               ),
               SizedBox(height: 20,),
-              ListWojacFav(),
+              ListWojacFav(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Details(
+
+                        )),
+                  );
+                },
+              ),
 
             ],
           ),

@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
             ),
 
             debugShowCheckedModeBanner: false,
-            home: const Details());
+            home: const Home());
       },
     );
   }
