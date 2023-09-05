@@ -7,7 +7,6 @@ import 'package:wojac_app/Pages/Screen/Details/Details.dart';
 import 'dart:html';
 
 import 'package:wojac_app/Pages/Screen/HomeScreen/Image-tab.dart';
-import 'package:wojac_app/Pages/Screen/HomeScreen/Main-Screen.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 import 'Pages/Screen/Home/Home.dart';

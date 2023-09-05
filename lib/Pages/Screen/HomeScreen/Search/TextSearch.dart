@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
+import 'package:wojac_app/const/Styels.dart';
 
 class TextSearch extends StatefulWidget {
   const TextSearch({super.key});
@@ -26,7 +28,12 @@ class _TextSearchState extends State<TextSearch> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-
+    cursorColor: Color(0xff0FF3B2),
+      style: fontStyle(
+         weight: FontWeight.bold,
+          color: kGround,
+         fontSize: 3.sp
+      ),
       onChanged: (value){},
       onSubmitted:(value){
         log(searchTextController.text as num);
@@ -34,17 +41,25 @@ class _TextSearchState extends State<TextSearch> {
       controller:searchTextController,
       keyboardType:TextInputType.text,
       decoration: InputDecoration(
-        hintText: 'Search',
-        hintStyle: TextStyle(color: kgreen),
-        prefixIcon:Icon(Icons.search,color: kgreen),
+        hintText: 'Search for wojaks ...',
+        hintStyle: TextStyle(
+            color: Colors.white
+        ),
+        prefixIcon:Icon(
+            Icons.search_sharp,
+            color: Colors.white),
         suffixIcon: GestureDetector(
           onTap: (){
             searchTextController.clear();
             FocusScope.of(context).unfocus();
           },
-          child: Icon(Icons.close,color: kgreen),
+          child: Icon(
+              Icons.close,
+              color: Colors.white.withOpacity(.8)
+          ),
         ),
-        fillColor: kWhite,
+
+        fillColor: Color(0xffBEBEBE),
         focusedBorder: OutlineInputBorder(
           borderRadius:  BorderRadius.circular(18),
           borderSide: BorderSide(

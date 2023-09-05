@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
+import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wojac_app/const/Colors.dart';
 
-import '../HomeScreen/Main-Screen.dart';
+import '../../navbar/top_bar_contents.dart';
+import '../HomeScreen/Search/TextSearch.dart';
+
+
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,18 +17,18 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: kGround,
-         body:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            if (MediaQuery.of(context).size.width >= 640)
-              Expanded(child: MainScreen()
-              ),
+         body: SingleChildScrollView(
+           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.center,
+             mainAxisSize: MainAxisSize.max,
+             children: [
+               TopBarContents(),
+               HomeScreen(),
 
 
-
-          ],
-        ),
+             ],
+           ),
+         ),
       ),
     );
   }

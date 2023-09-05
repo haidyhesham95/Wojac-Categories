@@ -15,16 +15,16 @@ class ListCard extends StatelessWidget {
     return Container(
       height: size.height*0.26,
       child: RawScrollbar(
-        thumbColor: kWhite,
+        thumbColor: Colors.white.withOpacity(.8),
         trackVisibility: true,
         controller: yourScrollController,
-        thickness: 8,
+        thickness: 1.w,
 
-        radius: Radius.circular(20),
+        radius: Radius.circular(20.r),
         child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-          itemCount: 10,
+            itemCount: 10,
             controller: yourScrollController,
             itemBuilder: (context,index){
             return Padding(
@@ -57,10 +57,22 @@ class ListCard extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          'Wojak',
-                          textAlign: TextAlign.center,
-                          style: fontStyle(FontWeight.w900),
+                        Padding(
+                          padding:  EdgeInsets.symmetric(
+                            horizontal: 3.w
+                          ),
+                          child: Text(
+                            'Wojak'*5,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
+                            style: fontStyle(
+                              weight:FontWeight.bold,
+                              fontSize: 3.sp,
+                              color: kGround,
+
+                            ),
+                          ),
                         ),
                       ],
                     ),

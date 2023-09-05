@@ -38,8 +38,15 @@ abstract class Styles {
 const TextStyle textStyle = TextStyle();
 
 //quick sand font
-TextStyle fontStyle(FontWeight weight) {
+TextStyle fontStyle(
+{
+  Color? color,
+  double? fontSize,
+  FontWeight? weight,
+}) {
   return GoogleFonts.quicksand(
-      fontWeight: weight
+        fontWeight: weight??FontWeight.normal,
+       fontSize: fontSize?? 5.sp,
+       color: color??kWhite
   );
 }
