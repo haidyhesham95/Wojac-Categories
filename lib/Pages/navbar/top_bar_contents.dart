@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
@@ -123,7 +124,9 @@ class _TopBarContentsState extends State<TopBarContents> {
                           : _isHovering[2] = false;
                     });
                   },
-                  onTap: () {},
+                  onTap: () {
+
+                  },
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -156,7 +159,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Profile',
+                        'Categories',
                         style: TextStyle(
                             color: _isHovering[3]
                                 ? Colors.greenAccent

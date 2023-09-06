@@ -1,3 +1,5 @@
+import 'package:bloc/bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -10,9 +12,21 @@ import 'package:wojac_app/Pages/Screen/HomeScreen/Image-tab.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 import 'Pages/Screen/Home/Home.dart';
+import 'cubits/bloc_observer.dart';
 
-void main() {
+ void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = MyBlocObserver();
+  Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyDXC4p5e6bxVgfQ6PyC9ciYwaAxrxZkspo",
+        appId: "1:826404721767:web:e39e503a13270a695470c2",
+        messagingSenderId: "826404721767",
+        projectId: "wojakerz-92207"
+    )
+  );
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
