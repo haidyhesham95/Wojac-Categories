@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rive/rive.dart';
 import 'package:wojac_app/Widget/item.dart';
 import 'dart:html';
 import 'package:wojac_app/const/Colors.dart';
@@ -18,69 +19,97 @@ class HomeScreen extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return
 
-       Container(
-        padding: const EdgeInsets.all(20),
-        color: kGround,
-        child:  Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 15,),
-            Text(
-              'Wojak Categories',
-             style: fontStyle(
-               weight: FontWeight.bold,
-                 fontSize: 4.sp
-
-             ),
-            ),
-            SizedBox(
-              height: 15.h,),
-            ListCard(),
-            SizedBox(
-              height: 15.h,),
-            Row(
+       ListView(
+         shrinkWrap: true,
+         physics: NeverScrollableScrollPhysics(),
+         children: [
+           Container(
+            padding: const EdgeInsets.all(20),
+            color: kGround,
+            child:  Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 15,),
                 Text(
-                  'Latest Wojaks ',
-                  style: fontStyle(
-                      weight:FontWeight.bold,
-                    fontSize: 4.sp
+                  'Wojak Categories',
+                 style: fontStyle(
+                   weight: FontWeight.bold,
+                     fontSize: 4.sp
+
+                 ),
+                ),
+                SizedBox(
+                  height: 15.h,),
+                ListCard(),
+                Padding(
+                  padding:  EdgeInsets.symmetric(
+                    horizontal: 5.w
+                  ),
+                  child: Container(
+                    height: 60.h,
+                    child: Row(
+
+                      children: [
+                        Container(
+                          height: 60.h,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Text(
+
+                                'Latest Wojaks ',
+
+                                style: fontStyle(
+                                    weight:FontWeight.bold,
+                                  fontSize: 6.sp > 30 ? 6.sp : 30
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                     const Row(
+                       mainAxisSize: MainAxisSize.min,
+                       mainAxisAlignment: MainAxisAlignment.start,
+                       children: [
+                         RiveAnimation.asset(
+                           'assets/images/4407-9024-fire-loop.riv',
+                           useArtboardSize: true,
+
+
+
+
+                         ),
+                       ],
+                     ),
+
+
+                      ],
+                    ),
                   ),
                 ),
-             Container(
-               height: 24.h,
-               width: 32.w,
-               child: Row(
-                 mainAxisSize: MainAxisSize.min,
-                 mainAxisAlignment: MainAxisAlignment.start,
-                 children: [
-                   Image(
-                       image:
-                       AssetImage(
-                           'assets/images/fire.png'
-                       ),
-                   ),
-                 ],
-               ),
-             ),
-
+                SizedBox(
+                  height: 20.h
+                  ,),
+                Container(
+                  width: MediaQuery.sizeOf(context).width,
+                  child: Column(
+                    children: [
+                      Wrap(
+                       spacing: 15.w,
+                        runSpacing: 3.5.h > 10? 3.5.h : 10,
+                       children: List.generate(6, (index) => wojakItem(size: size)),
+                      ),
+                    ],
+                  ),
+                ),
 
               ],
             ),
-            SizedBox(
-              height: 20.h
-              ,),
-           Wrap(
-             spacing: 10.w,
-             runSpacing: 30.h,
-             children: List.generate(6, (index) => wojakItem(size: size)),
-           ),
 
-          ],
-        ),
-
-    );
+    ),
+         ],
+       );
 
   }
 }

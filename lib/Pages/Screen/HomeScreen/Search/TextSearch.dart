@@ -32,7 +32,7 @@ class _TextSearchState extends State<TextSearch> {
       style: fontStyle(
          weight: FontWeight.bold,
           color: kGround,
-         fontSize: 3.sp
+         fontSize: 3.w > 16 ? 3.w : 16
       ),
       onChanged: (value){},
       onSubmitted:(value){

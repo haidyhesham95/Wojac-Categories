@@ -11,8 +11,8 @@ class HeartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 25.h,
-      width: 7.w,
+      height: 25.h > 30? 25.h : 30,
+      width: 7.w > 38 ? 7.w : 38,
      decoration: BoxDecoration(
        borderRadius: BorderRadius.circular(8),
        color:kWhite.withOpacity(.8),
@@ -21,7 +21,7 @@ class HeartWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: LikeButton(
-         size: 5.w,
+         size: 5.w > 25 ? 5.w : 25,
          likeCountAnimationDuration: Duration(
            microseconds: 500
           ),

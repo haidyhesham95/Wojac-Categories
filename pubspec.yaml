@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   vertical_tabs_flutter: ^1.0.0
+  rive: ^0.11.16
   http: ^1.1.0
   intl: ^0.18.1
   flutter_screenutil: ^5.9.0

@@ -11,8 +11,10 @@ Widget wojakItem (
 }
     ) {
   return  Container(
-    height: 210.h,
-    width: 75.w,
+
+    width: 75.w > 400 ? 75.w : 400 ,
+    height: 212.h > 300 ? 212.h : 300,
+
     clipBehavior: Clip.antiAliasWithSaveLayer,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(15),
@@ -63,7 +65,7 @@ Widget wojakItem (
           ),
         ),
         Container(
-          height: 40.h,
+          height: 40.h > 50 ? 40.h : 50,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -89,9 +91,7 @@ Widget wojakItem (
                       vertical: 4.h
                     ),
                     child: Container(
-                      constraints: BoxConstraints(
-                          maxWidth: 34.w
-                      ),
+                     width: 35.w > 185 ? 35.w : 185,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -120,8 +120,9 @@ Widget wojakItem (
                 ],
               ),
               Container(
-                height:20.h,
-                width: 30.w,
+                height: 20.h,
+                width: 30.w > 130 ? 30.w : 130,
+
                 decoration: BoxDecoration(
                     color: kGround,
                     borderRadius: BorderRadius.circular(10)
@@ -130,7 +131,10 @@ Widget wojakItem (
                     onPressed: () { },
                     child: Text(
                       'Follow',
-                      style: Styles.textStyle10,
+                      style: fontStyle(
+                        weight: FontWeight.bold,
+                        fontSize: 3.w > 15 ? 3.w : 15
+                      )
                     )),
               ),
 

@@ -25,7 +25,7 @@ abstract class Styles {
   );
   static TextStyle textStyle10= TextStyle(
       color: Colors.white,
-      fontSize: 2.5.sp
+      fontSize: 6.2.w
   );
 
 
