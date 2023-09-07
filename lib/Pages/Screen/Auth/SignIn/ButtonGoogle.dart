@@ -8,24 +8,33 @@ class ButtonGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      padding: EdgeInsets.zero,
       onPressed: (){},
       color: kWhite,
       child:  Container(
-        height: 48.h > 50 ? 48.h : 50,
-        width: 75.w > 185 ? 75.w : 185,
         child: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/google.png',height: 25.h,width: 10.w,),
+              Image.asset('assets/images/google-symbol.png',
+                height: 25.h > 25 ? 25.h : 25,
+                width: 10.w > 25 ? 10.w : 25  ,),
               SizedBox(width: 5.w,),
               Text(
-                'Sign In With Google',style: TextStyle(fontSize: 4.sp),
+                'Sign In With Google',
+                style: TextStyle(
+                  fontSize: 5.sp > 18 ? 5.sp : 18,
+
+                ),
 
               ),
             ],
+            mainAxisAlignment: MainAxisAlignment.center,
+
           ),
         ),
+        height: 38.h > 50 ? 38.h : 50,
+        width: 120.w > 300 ? 120.w : 300,
+
       ),
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),

@@ -10,14 +10,19 @@ class ButtonSignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
+      padding: EdgeInsets.zero,
       onPressed: onPressed,
-      color: kGround,
+      color: kgreen,
       child:  Container(
-        height: 48.h > 50 ? 48.h : 50,
-        width: 75.w > 185 ? 75.w : 185,
+        height: 38.h > 50 ? 38.h : 50,
+        width: 120.w > 300 ? 120.w : 300,
         child: Center(
           child: Text(
-              data,style:Styles.textStyle18,
+              data,
+            style:TextStyle(
+              color: kWhite,
+              fontSize: 5.sp > 18 ? 5.sp : 18
+            )
 
           ),
         ),
