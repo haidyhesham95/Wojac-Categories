@@ -61,21 +61,21 @@ class _TextSearchState extends State<TextSearch> {
 
         fillColor: Color(0xffBEBEBE),
         focusedBorder: OutlineInputBorder(
-          borderRadius:  BorderRadius.circular(18),
+          borderRadius:  BorderRadius.circular(15),
           borderSide: BorderSide(
             color: kgreen,
             width: 1.5,
           ),
         ),
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide(
               color: kgreen,
               width:1.5,
             )
         ),
         filled: true,
-        contentPadding: const EdgeInsets.all(20),
+        contentPadding: const EdgeInsets.all(15),
       ),
     );
   }

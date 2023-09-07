@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 import '../Screen/HomeScreen/Search/TextSearch.dart';
 
 class TopBarContents extends StatefulWidget {
-
   TopBarContents();
 
   @override
@@ -24,49 +22,46 @@ class _TopBarContentsState extends State<TopBarContents> {
     false,
     false
   ];
+  bool isDrawerOpen = false;
+
+  void toggleDrawer() {
+    setState(() {
+      isDrawerOpen = !isDrawerOpen;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: kWhite,
-              width: 0.1.w
-            )
-          )
-        ),
-        child: Padding(
-          padding:  EdgeInsets.only(
-              top: 15.h,
-              bottom: 10.h
-          ),
-          child: Expanded(
-            child: Row(
+      color: kgreen,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 15, bottom: 10),
+        child: Expanded(
+          child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: screenSize.width/15,
+                  width: screenSize.width / 15,
                 ),
                 CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/profile.png',),
+                  backgroundImage: AssetImage(
+                    'assets/images/profile.png',
+                  ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
+                SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
                     setState(() {
-                      value
-                          ? _isHovering[0] = true
-                          : _isHovering[0] = false;
+                      value ? _isHovering[0] = true : _isHovering[0] = false;
                     });
                   },
                   onTap: () {
-                  // using state management make the body in the home screen (first screen) = home screen (that where the categories , etc...)
-                  //  I SAID THE BODY (DON'T NAVIGATE ! )
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -74,24 +69,30 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Home',
                         style: TextStyle(
-                            color: _isHovering[0]
-                                ? Colors.greenAccent
-                                : kWhite,
+                            color: _isHovering[0] ? kGround : kWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                        ),
+                            fontSize: 16),
                       ),
+                      SizedBox(height: 5),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: _isHovering[0],
+                        child: Container(
+                          height: 2,
+                          width: 20,
+                          color: kWhite,
+                        ),
+                      )
                     ],
                   ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
+                SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
                     setState(() {
-                      value
-                          ? _isHovering[1] = true
-                          : _isHovering[1] = false;
+                      value ? _isHovering[1] = true : _isHovering[1] = false;
                     });
                   },
                   onTap: () {},
@@ -101,26 +102,26 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Top',
                         style: TextStyle(
-                            color: _isHovering[1]
-                                ? Colors.greenAccent
-                                : kWhite,
+                            color: _isHovering[1] ? kGround : kWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                        ),
+                            fontSize: 16),
                       ),
-
-
+                      SizedBox(height: 5),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: _isHovering[1],
+                        child: Container(height: 2, width: 20, color: kWhite),
+                      )
                     ],
                   ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
+                SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
                     setState(() {
-                      value
-                          ? _isHovering[2] = true
-                          : _isHovering[2] = false;
+                      value ? _isHovering[2] = true : _isHovering[2] = false;
                     });
                   },
                   onTap: () {},
@@ -130,25 +131,26 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Community',
                         style: TextStyle(
-                            color: _isHovering[2]
-                                ? Colors.greenAccent
-                                : kWhite,
+                            color: _isHovering[2] ? kGround : kWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                        ),
+                            fontSize: 16),
                       ),
-
+                      SizedBox(height: 5),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: _isHovering[2],
+                        child: Container(height: 2, width: 20, color: kWhite),
+                      )
                     ],
                   ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
+                SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
                     setState(() {
-                      value
-                          ? _isHovering[3] = true
-                          : _isHovering[3] = false;
+                      value ? _isHovering[3] = true : _isHovering[3] = false;
                     });
                   },
                   onTap: () {},
@@ -158,25 +160,26 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Profile',
                         style: TextStyle(
-                            color: _isHovering[3]
-                                ? Colors.greenAccent
-                                : kWhite,
+                            color: _isHovering[3] ? kGround : kWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                        ),
+                            fontSize: 16),
                       ),
-
+                      SizedBox(height: 5),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: _isHovering[3],
+                        child: Container(height: 2, width: 20, color: kWhite),
+                      )
                     ],
                   ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
+                SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
                     setState(() {
-                      value
-                          ? _isHovering[4] = true
-                          : _isHovering[4] = false;
+                      value ? _isHovering[4] = true : _isHovering[4] = false;
                     });
                   },
                   onTap: () {},
@@ -186,37 +189,68 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'About',
                         style: TextStyle(
-                            color: _isHovering[4]
-                                ? Colors.greenAccent
-                                : kWhite,
+                            color: _isHovering[4] ? kGround : kWhite,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16
-                        ),
+                            fontSize: 16),
                       ),
-
+                      SizedBox(height: 5),
+                      Visibility(
+                        maintainAnimation: true,
+                        maintainState: true,
+                        maintainSize: true,
+                        visible: _isHovering[4],
+                        child: Container(
+                          height: 2,
+                          width: 20,
+                          color: kWhite,
+                        ),
+                      )
                     ],
                   ),
                 ),
-                SizedBox(
-                    width: screenSize.width / 25),
-                const Spacer(),
-                Padding(
-                  padding:  EdgeInsets.symmetric(
-                    horizontal: 3.5.w
-                  ),
-                  child: SizedBox(
-                    height: 40.h,
-                    width: 100.w,
-                    child: const TextSearch(),
+                SizedBox(width: screenSize.width / 25),
+                Container(
+                  height: 50,
+                  width: 450,
+                  child: TextSearch(),
+                ),
+                SizedBox(width: screenSize.width / 25),
+                GestureDetector(
+                  onTap: () {
+                    isDrawerOpen;
+                  },
+                  child: Stack(
+                    children: [
+                      IconButton(
+                          onPressed: toggleDrawer,
+                          icon: Icon(
+                            Icons.menu,
+                            color: kWhite,
+                            size: 25,
+                          )),
+                      Visibility(
+                        visible: isDrawerOpen,
+                        child: AnimatedContainer(
+                          duration: Duration(milliseconds: 300),
+                          height: isDrawerOpen ? 200 : 0.0,
+                          color: Colors.blue,
+                          child: Center(
+                            child: Text(
+                              'Drawer Content',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-
-              ],
-            ),
-          ),
+              ]),
         ),
-
-      );
-    //);
+      ),
+    );
   }
 }

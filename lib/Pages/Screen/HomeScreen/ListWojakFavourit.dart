@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Widget/item.dart';
-import 'package:wojac_app/const/Colors.dart';
-import 'dart:ui_web';
-import '../../../Widget/heartWidget.dart';
-import '../../../const/Styels.dart';
-import '../Details/Details.dart';
 
 class ListWojacFav extends StatelessWidget {
    ListWojacFav({super.key,this.onTap});

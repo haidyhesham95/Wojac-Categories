@@ -1,139 +1,101 @@
 import 'package:flutter/Material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
-
 import 'AccountSignup.dart';
 import 'BottonForget.dart';
 import 'ButtonGoogle.dart';
 import 'ButtonSignIn.dart';
 import 'DividerOr.dart';
+import 'dart:ui_web';
+
+import 'Image.dart';
+import 'TextField.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return      
-       Container(
-        margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(20),
-        //color: kWhite,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 50),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SingleChildScrollView(
-                child: Column(
+    return
+       SafeArea(
+         child: Scaffold(
+           backgroundColor: kWhite,
+           body: Container(
+            margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(20),
+            color: kWhite,
+            
+            child: Padding(
+              padding: const EdgeInsets.only(left: 50),
+              child: Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Welcome Back 👋',style: TextStyle(
-                          fontSize: 28,
-                        ),),
-                        SizedBox(height: 20,),
-                        Text('Today is a new day,You shape it.\r SignIn to start managing your projects.',style: TextStyle(
-                          fontSize: 18,
-                        ),),
-                        SizedBox(height: 40,),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10,bottom: 5),
-                          child: Text('Email'),
-                        ),
-                        Container(
-                          height: 48,
-                          width: 388,
-                          child: TextFormField(
-                            keyboardType:TextInputType.emailAddress,
-                            decoration: InputDecoration(
-                              hintText: 'Example@email.com',
-                              fillColor: kWhite,
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:  BorderRadius.circular(12),
-                                borderSide: BorderSide(
-                                  color: kgreen,
-                                  width: 1.5,
-                                ),
+                    SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Welcome Back 👋',style: TextStyle(
+                                fontSize: 10.sp,
+                              ),),
+                              SizedBox(height: 20.h,),
+                              Text('Today is a new day,You shape it.\r SignIn to start managing your projects.',style: TextStyle(
+                                fontSize: 5.sp,
+                              ),),
+                              SizedBox(height: 40.h,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10,bottom: 5),
+                                child: Text('Email'),
                               ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                  borderSide: BorderSide(
-                                    color: kgreen,
-                                    width:1.5,
-                                  )
-                              ),
-                              filled: true,
-                              contentPadding: const EdgeInsets.all(20),
-                            ),
+                              ConstField(
+                                hintText: 'Example@email.com',
+                                keyboardType:TextInputType.emailAddress,
+                                obscureText: false,
 
+                              ),
+                              SizedBox(height: 20.h,),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10,bottom: 5),
+                                child: Text('Password'),
+                              ),
+                              ConstField(
+                                hintText: '8 Characters',
+                                keyboardType: TextInputType.visiblePassword,
+                                obscureText: true,
+
+                              ),
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 20,),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10,bottom: 5),
-                          child: Text('Password'),
-                        ),
-                        Container(
-                          height: 48,
-                          width: 388,
-                          child: TextFormField(
-                            keyboardType:TextInputType.visiblePassword,
-                            obscureText: true,
-
-                            decoration: InputDecoration(
-                              hintText: '8 Characters',
-
-
-                              fillColor: kWhite,
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius:  BorderRadius.circular(12),
-                                borderSide: BorderSide(
-                                  color: kgreen,
-                                  width: 1.5,
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                  borderSide: BorderSide(
-                                    color: kgreen,
-                                    width:1.5,
-                                  )
-                              ),
-                              filled: true,
-                              contentPadding: const EdgeInsets.all(20),
-                            ),
-
+                          const ButtonForget(),
+                          SizedBox(height: 20.h,),
+                          ButtonSignIn(
+                            onPressed: (){},
+                            data: 'Sign In' ,
                           ),
-                        ),
-                      ],
+                          SizedBox(height: 15.h),
+                           DividerOr(),
+                          SizedBox(height: 15.h),
+                          const ButtonGoogle(),
+                          SizedBox(height: 30.h,),
+                          const AccountSignUp(),
+                        ],
+                      ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 250),
-                      child: ButtonForget(),
-                    ),
-                    SizedBox(height: 20,),
-                    ButtonSignIn(
-                      onPressed: (){},
-                      data: 'Sign In' ,
-                    ),
-                    SizedBox(height: 40,),
-                    //DividerOr(),
-                    ButtonGoogle(),
-                    SizedBox(height: 30,),
-                    AccountSignUp(),
+
+                    Image_I(name: 'assets/images/signin.png',),
+
                   ],
                 ),
               ),
-
-              Image.asset('assets/images/signin.png'),
-
-            ],
-          ),
-        ),
+            ),
       
-    );
+    ),
+         ),
+       );
   }
 }

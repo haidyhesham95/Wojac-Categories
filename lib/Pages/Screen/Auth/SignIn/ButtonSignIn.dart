@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 
@@ -8,13 +9,12 @@ class ButtonSignIn extends StatelessWidget {
   final  void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
-    Size size =MediaQuery.of(context).size;
     return MaterialButton(
       onPressed: onPressed,
       color: kGround,
       child:  Container(
-        height: 48,
-        width: 300,
+        height: 48.h > 50 ? 48.h : 50,
+        width: 75.w > 185 ? 75.w : 185,
         child: Center(
           child: Text(
               data,style:Styles.textStyle18,

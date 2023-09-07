@@ -1,4 +1,5 @@
 import 'package:flutter/Material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 class ButtonGoogle extends StatelessWidget {
@@ -10,16 +11,16 @@ class ButtonGoogle extends StatelessWidget {
       onPressed: (){},
       color: kWhite,
       child:  Container(
-        height: 48,
-        width: 300,
+        height: 48.h > 50 ? 48.h : 50,
+        width: 75.w > 185 ? 75.w : 185,
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/google.png',height: 25,width: 20,),
-              SizedBox(width: 5,),
+              Image.asset('assets/images/google.png',height: 25.h,width: 10.w,),
+              SizedBox(width: 5.w,),
               Text(
-                'Sign In With Google',style: TextStyle(fontSize: 18),
+                'Sign In With Google',style: TextStyle(fontSize: 4.sp),
 
               ),
             ],

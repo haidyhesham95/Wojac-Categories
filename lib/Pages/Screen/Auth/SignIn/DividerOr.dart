@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DividerOr extends StatelessWidget {
   const DividerOr({Key? key});
@@ -6,31 +7,22 @@ class DividerOr extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Flexible(
-          flex: 1, // Added flex property
-          child: Container(
-            child: Divider(
-              indent: 10.0,
-              endIndent: 20.0,
-              thickness: 1,
-              color: Colors.black,
-            ),
-          ),
+        Divider(
+          color: Colors.black,
+
+          thickness: 1,
+          indent: 10,
+          endIndent: 10,
         ),
-        Text('OR'),
-        Flexible(
-          flex: 1, // Added flex property
-          child: Container(
-            child: Divider(
-              indent: 10.0,
-              endIndent: 20.0,
-              thickness: 1,
-              color: Colors.black,
-            ),
-          ),
-        ),
+         Text('or'),
+        Divider(
+    color: Colors.black,
+
+    thickness: 1,
+    indent: 10,
+    endIndent: 10,
+    ),
       ],
     );
   }
