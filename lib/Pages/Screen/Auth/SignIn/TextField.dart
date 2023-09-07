@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/const/Styels.dart';
 
 import '../../../../const/Colors.dart';
 
@@ -11,11 +12,13 @@ class ConstField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 48.h > 50 ? 48.h : 50,
-      width: 120.w > 185 ? 120.w : 185,
+      height: 38.h > 50 ? 38.h : 50,
+      width: 120.w > 300 ? 120.w : 300,
       child: TextFormField(
+        cursorColor: kGround,
         keyboardType:keyboardType,
         obscureText: obscureText,
+
         decoration: InputDecoration(
           hintText: hintText,
           fillColor: kWhite,

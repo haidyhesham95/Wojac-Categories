@@ -15,10 +15,9 @@ class DividerOr extends StatelessWidget {
           indent: 10,
           endIndent: 10,
         ),
-         Text('or'),
+
         Divider(
     color: Colors.black,
-
     thickness: 1,
     indent: 10,
     endIndent: 10,
