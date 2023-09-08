@@ -28,6 +28,44 @@ abstract class Styles {
       fontSize: 6.2.w
   );
 
+  static TextStyle textStyle5sp= TextStyle(
+      fontSize: 5.sp > 18 ? 5.sp : 18,
+      color: kWhite
+  );
+  static TextStyle textStyle10sp=TextStyle(
+
+        fontSize: 10.sp > 30 ? 10.sp : 30,
+        fontWeight: FontWeight.bold,
+        color: kWhite
+
+
+  );
+  static TextStyle textStyle315sp=TextStyle(
+
+    color: kWhite,
+    fontSize: 15>3.sp ? 15 : 3.sp,
+
+
+  );
+  static TextStyle textStyle318sp=TextStyle(
+
+    color: kWhite,
+    fontSize: 3.sp > 18 ? 3.sp : 18,
+
+
+  );
+
+  static TextStyle textStyle4sp=TextStyle(
+
+      fontSize: 4.sp > 20 ? 4.sp : 20,
+      color: kWhite
+
+
+  );
+
+
+
+
 
 
 

@@ -1,19 +1,21 @@
 import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:wojac_app/Widget/CustomField.dart';
+import 'package:wojac_app/Pages/Screen/Auth/SignIn/SignIn.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 import '../../../../Widget/Custom_ColmnT.dart';
-import '../../../../Widget/Custom_TextButton.dart';
-import '../SignUp/SignUp.dart';
-import 'BottonForget.dart';
-import 'ButtonGoogle.dart';
-import 'ButtonSignIn.dart';
-import 'dart:ui_web';
 import '../../../../Widget/Custom_Image.dart';
+import '../../../../Widget/Custom_TextButton.dart';
+import '../SignIn/BottonForget.dart';
+import '../SignIn/ButtonGoogle.dart';
+import '../SignIn/ButtonSignIn.dart';
+import '../../../../Widget/CustomField.dart';
 
-class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+import 'dart:ui_web';
+
+
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,50 +40,48 @@ class SignIn extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Custom_CoulmnT(
-                            text1: 'Welcome Back',
-                            text2: 'Sign In to start your wojak journey',
+                            text1: 'Welcome',
+                            text2: 'Sign up to start your wojak journey',
                           ),
                           SizedBox(
                             height: 40.h,
+                          ),
+                          CustomField(hintText: 'UserName', keyboardType:TextInputType.name , obscureText: false, data: 'UserName'),
+                          SizedBox(
+                            height: 20.h,
                           ),
                           CustomField(hintText: 'Example@email.com', keyboardType:TextInputType.emailAddress , obscureText: false, data: 'Email'),
                           SizedBox(
                             height: 20.h,
                           ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              CustomField(hintText: 'at least 8 characters', keyboardType:TextInputType.visiblePassword , obscureText: true, data: 'Password'),
-                              const ButtonForget(),
-                            ],
+                          CustomField(hintText: 'at least 8 characters', keyboardType:TextInputType.visiblePassword , obscureText: true, data: 'Password'),
+                          SizedBox(
+                            height: 60.h,
+                          ),
+                          ButtonSignIn(
+                            onPressed: () {},
+                            data: 'Sign Up',
                           ),
                           SizedBox(
                             height: 20.h,
                           ),
-                          ButtonSignIn(
-                            onPressed: () {},
-                            data: 'Sign In',
+                          Custom_TextButton(text: 'Already a member?',data:' Sign In',onPressed: (){
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder:(context)=> SignIn(),
+                              ),
+                            );
+                          }
+
                           ),
 
-                          SizedBox(height: 15.h),
-                          const ButtonGoogle(),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                           Custom_TextButton(text: 'Don\'t have an account ?',data:' Sign Up',onPressed: (){
-                             Navigator.pushReplacement(
-                               context,
-                               MaterialPageRoute(
-                                 builder:(context)=> SignUp(),
-                               ),
-                             );
-                           },),
                         ],
                       ),
                     ),
                   ),
                   if (MediaQuery.sizeOf(context).width >= 1260)
-                  Custom_Image(name: 'assets/images/signin.png')
+                    Custom_Image(name: 'assets/images/wojacUp.jpg')
                 ],
               ),
             ),

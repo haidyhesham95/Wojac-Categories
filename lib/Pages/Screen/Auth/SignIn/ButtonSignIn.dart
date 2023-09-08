@@ -19,10 +19,7 @@ class ButtonSignIn extends StatelessWidget {
         child: Center(
           child: Text(
               data,
-            style:TextStyle(
-              color: kWhite,
-              fontSize: 5.sp > 18 ? 5.sp : 18
-            )
+           style: Styles.textStyle5sp,
 
           ),
         ),
