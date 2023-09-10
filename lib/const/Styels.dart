@@ -62,6 +62,14 @@ abstract class Styles {
 
 
   );
+  static TextStyle textStyle8sp=TextStyle(
+
+      fontSize: 8.sp > 28 ? 8.sp : 28,
+      fontWeight: FontWeight.bold,
+      color: kWhite
+
+
+  );
 
 
 

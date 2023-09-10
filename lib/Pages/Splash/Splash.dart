@@ -7,7 +7,7 @@ class Splash extends StatelessWidget {
   void _navigateToNewPage(BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => SignIn()), // Replace SecondPage with your desired page
+      MaterialPageRoute(builder: (context) => SignIn()),
     );
   }
 

@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 
-class ButtonSignIn extends StatelessWidget {
-  const ButtonSignIn({super.key, required this.data, this.onPressed});
+class Custom_Button extends StatelessWidget {
+  const Custom_Button({super.key, required this.data, this.onPressed});
   final String data;
   final  void Function()? onPressed;
   @override

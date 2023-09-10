@@ -8,7 +8,7 @@ import '../../../../Widget/Custom_Image.dart';
 import '../../../../Widget/Custom_TextButton.dart';
 import '../SignIn/BottonForget.dart';
 import '../SignIn/ButtonGoogle.dart';
-import '../SignIn/ButtonSignIn.dart';
+import '../../../../Widget/Custom_Button.dart';
 import '../../../../Widget/CustomField.dart';
 
 import 'dart:ui_web';
@@ -58,7 +58,7 @@ class SignUp extends StatelessWidget {
                           SizedBox(
                             height: 60.h,
                           ),
-                          ButtonSignIn(
+                          Custom_Button(
                             onPressed: () {},
                             data: 'Sign Up',
                           ),

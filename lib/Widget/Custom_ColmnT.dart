@@ -14,7 +14,7 @@ final String text2;
       children: [
         Text(
           text1,
-          style: Styles.textStyle10sp,
+          style: Styles.textStyle8sp,
         ),
 
         SizedBox(
