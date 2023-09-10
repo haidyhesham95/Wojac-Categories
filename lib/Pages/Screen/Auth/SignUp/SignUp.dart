@@ -6,8 +6,8 @@ import 'package:wojac_app/const/Styels.dart';
 import '../../../../Widget/Custom_ColmnT.dart';
 import '../../../../Widget/Custom_Image.dart';
 import '../../../../Widget/Custom_TextButton.dart';
-import '../SignIn/BottonForget.dart';
-import '../SignIn/ButtonGoogle.dart';
+import '../../../../Widget/BottonForget.dart';
+import '../../../../Widget/ButtonGoogle.dart';
 import '../../../../Widget/Custom_Button.dart';
 import '../../../../Widget/CustomField.dart';
 
