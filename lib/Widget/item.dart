@@ -1,5 +1,6 @@
 import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/Widget/Container_img_list.dart';
 
 import '../const/Colors.dart';
 import '../const/Styels.dart';
@@ -11,10 +12,8 @@ Widget wojakItem (
 }
     ) {
   return  Container(
-
     width: 75.w > 400 ? 75.w : 400 ,
     height: 212.h > 300 ? 212.h : 300,
-
     clipBehavior: Clip.antiAliasWithSaveLayer,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(15),
@@ -33,28 +32,7 @@ Widget wojakItem (
           ),
           child: Stack(
             children: [
-              Container(
-                  decoration: BoxDecoration(
-                    
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(15),
-                      topRight: Radius.circular(15),
-
-                    )
-                  ),
-                  child: AspectRatio(
-                    aspectRatio: 16/9,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(.5),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/maxresdefault (93).jpg'),
-
-                        )
-                      ),
-
-                    ),
-                  )),
+              Img_List(assetName: 'assets/images/maxresdefault (93).jpg'),
               Positioned(
                 top: 6,
                 right: 9,
@@ -131,10 +109,7 @@ Widget wojakItem (
                     onPressed: () { },
                     child: Text(
                       'Follow',
-                      style: fontStyle(
-                        weight: FontWeight.bold,
-                        fontSize: 3.w > 15 ? 3.w : 15
-                      )
+                      style: Styles.textStyle3bold
                     )),
               ),
 

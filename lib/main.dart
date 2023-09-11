@@ -6,11 +6,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignIn/SignIn.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignUp/SignUp.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
+import 'package:wojac_app/Pages/Screen/Top_Screen/Top_Screen.dart';
 
 
 import 'dart:html';
 
-import 'package:wojac_app/Pages/Screen/HomeScreen/Image-tab.dart';
 import 'package:wojac_app/Pages/Splash/Splash.dart';
 import 'package:wojac_app/const/Colors.dart';
 
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
             ),
 
             debugShowCheckedModeBanner: false,
-            home: Splash());
+            home: TopScreen());
       },
     );
   }
