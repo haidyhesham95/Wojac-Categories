@@ -28,7 +28,7 @@ class _TextSearchState extends State<TextSearch> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-    cursorColor: Color(0xff0FF3B2),
+    cursorColor: kgreen,
       style: fontStyle(
          weight: FontWeight.bold,
           color: kGround,
@@ -43,11 +43,11 @@ class _TextSearchState extends State<TextSearch> {
       decoration: InputDecoration(
         hintText: 'Search for wojaks ...',
         hintStyle: TextStyle(
-            color: Colors.white
+            color: kWhite
         ),
         prefixIcon:Icon(
             Icons.search_sharp,
-            color: Colors.white),
+            color: kgreen),
         suffixIcon: GestureDetector(
           onTap: (){
             searchTextController.clear();
@@ -55,7 +55,7 @@ class _TextSearchState extends State<TextSearch> {
           },
           child: Icon(
               Icons.close,
-              color: Colors.white.withOpacity(.8)
+              color: kgreen.withOpacity(.8)
           ),
         ),
 

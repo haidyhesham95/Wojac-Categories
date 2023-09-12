@@ -12,7 +12,7 @@ class ListCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size=MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
       height: size.height*0.26,
       child: RawScrollbar(
         thumbColor: Colors.white.withOpacity(.8),

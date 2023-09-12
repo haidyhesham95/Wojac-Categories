@@ -4,6 +4,7 @@ import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 import '../Screen/HomeScreen/Search/TextSearch.dart';
+import '../Screen/HomeScreen/drop_menu/drop_menu.dart';
 
 class TopBarContents extends StatefulWidget {
   TopBarContents();
@@ -23,19 +24,12 @@ class _TopBarContentsState extends State<TopBarContents> {
     false,
     false
   ];
-  bool isDrawerOpen = false;
 
-  void toggleDrawer() {
-    setState(() {
-      isDrawerOpen = !isDrawerOpen;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return Container(
-      color: kgreen,
       child: Padding(
         padding: const EdgeInsets.only(top: 15, bottom: 10),
         child: Expanded(
@@ -46,11 +40,8 @@ class _TopBarContentsState extends State<TopBarContents> {
                 SizedBox(
                   width: screenSize.width / 15,
                 ),
-                CircleAvatar(
-                  backgroundImage: AssetImage(
-                    'assets/images/profile.png',
-                  ),
-                ),
+
+                Drop_Menu(),
                 SizedBox(width: screenSize.width / 25),
                 InkWell(
                   onHover: (value) {
@@ -59,10 +50,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     });
                   },
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
-                    );
+
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -70,7 +58,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Home',
                         style: TextStyle(
-                            color: _isHovering[0] ? kGround : kWhite,
+                            color: _isHovering[0] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -103,7 +91,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Top',
                         style: TextStyle(
-                            color: _isHovering[1] ? kGround : kWhite,
+                            color: _isHovering[1] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -134,7 +122,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Community',
                         style: TextStyle(
-                            color: _isHovering[2] ? kGround : kWhite,
+                            color: _isHovering[2] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -163,7 +151,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'Categories',
                         style: TextStyle(
-                            color: _isHovering[3] ? kGround : kWhite,
+                            color: _isHovering[3] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -192,7 +180,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                       Text(
                         'About',
                         style: TextStyle(
-                            color: _isHovering[4] ? kGround : kWhite,
+                            color: _isHovering[4] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
@@ -217,40 +205,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                   width: 450,
                   child: TextSearch(),
                 ),
-                SizedBox(width: screenSize.width / 25),
-                GestureDetector(
-                  onTap: () {
-                    isDrawerOpen;
-                  },
-                  child: Stack(
-                    children: [
-                      IconButton(
-                          onPressed: toggleDrawer,
-                          icon: Icon(
-                            Icons.menu,
-                            color: kWhite,
-                            size: 25,
-                          )),
-                      Visibility(
-                        visible: isDrawerOpen,
-                        child: AnimatedContainer(
-                          duration: Duration(milliseconds: 300),
-                          height: isDrawerOpen ? 200 : 0.0,
-                          color: Colors.blue,
-                          child: Center(
-                            child: Text(
-                              'Drawer Content',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+
               ]),
         ),
       ),
