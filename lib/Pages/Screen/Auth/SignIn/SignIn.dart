@@ -1,10 +1,13 @@
+import 'package:admanager_web/admanager_web.dart';
 import 'package:flutter/Material.dart';
+import 'package:flutter_ad_manager_web/flutter_ad_manager_web.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Widget/CustomField.dart';
 import 'package:wojac_app/const/Colors.dart';
 import 'package:wojac_app/const/Styels.dart';
 import '../../../../Widget/Custom_ColmnT.dart';
 import '../../../../Widget/Custom_TextButton.dart';
+import '../../../../Widget/ad_widegt.dart';
 import '../SignUp/SignUp.dart';
 import '../../../../Widget/BottonForget.dart';
 import '../../../../Widget/ButtonGoogle.dart';
@@ -30,6 +33,7 @@ class SignIn extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+
                   Expanded(
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 5.w),

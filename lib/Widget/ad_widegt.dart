@@ -3,21 +3,22 @@ import 'dart:html';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
-Widget adsenseAdsView() {
+Widget adsenseAdsView(BuildContext context) {
   // ignore: undefined_prefixed_name
   ui.platformViewRegistry.registerViewFactory(
-       'ca-pub-6888998496908293',
+      'adViewType',
           (int viewID) => IFrameElement()
-        ..style.width = '100%'
-        ..style.height = '100%'
-        ..src = 'adview.html'
-        ..style.border = 'none');
+        ..width = '100%'
+        ..height = '100%'
+        ..src = 'web/adview.html'
+        ..style.border = 'none'
+  );
 
   return SizedBox(
-    height: 100.0,
-    width: 320.0,
+    height: MediaQuery.sizeOf(context).height,
+    width: MediaQuery.sizeOf(context).width,
     child: HtmlElementView(
-      viewType: '8307424997',
+      viewType: 'adViewType',
     ),
   );
 }
