@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ad_manager_web/flutter_ad_manager_web.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';

@@ -1,6 +1,5 @@
-import 'package:admanager_web/admanager_web.dart';
+
 import 'package:flutter/Material.dart';
-import 'package:flutter_ad_manager_web/flutter_ad_manager_web.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Widget/CustomField.dart';
 import 'package:wojac_app/const/Colors.dart';
