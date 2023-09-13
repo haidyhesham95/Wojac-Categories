@@ -1,4 +1,5 @@
 import 'package:flutter/Material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../const/Colors.dart';
 import '../../../const/Styels.dart';
@@ -31,15 +32,10 @@ class BorderCount extends StatelessWidget {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(top:21 ,left: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Ahmed Zone',style: Styles.textStyle15,),
-                  SizedBox(height: 5,),
-                  Text('View all ',style: TextStyle(color: Colors.white),),
-                ],
+              padding:  EdgeInsets.symmetric(
+                horizontal: 2.w
               ),
+              child: Text('Ahmed Zone',style: Styles.textStyle15,),
             ),
             Spacer(),
             Padding(

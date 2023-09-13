@@ -22,7 +22,7 @@ Widget TopList({required Size size}) {
               border: Border(
                   bottom: BorderSide(
                       color: kGround.withOpacity(.7), width: 0.45.w))),
-          child: Img_List(assetName: 'assets/images/maxresdefault (93).jpg'),
+          child: Img_List(assetName: 'assets/images/wojacUp.jpg'),
         ),
         Container(
           height: 50.h > 60 ? 50.h : 60,
