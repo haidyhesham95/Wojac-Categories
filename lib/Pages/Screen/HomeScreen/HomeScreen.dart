@@ -11,7 +11,15 @@ import 'ListCard.dart';
 
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+
+  List<String> images_test = [
+    'assets/images/img.png',
+    'assets/images/img (1).png',
+    'assets/images/img2.png',
+    'assets/images/pass.webp',
+    'assets/images/Wojak_cropped.jpg'
+  ];
+   HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +65,10 @@ class HomeScreen extends StatelessWidget {
                           Wrap(
                             spacing: 15.w,
                             runSpacing: 3.5.h > 10? 3.5.h : 10,
-                            children: List.generate(6, (index) => wojakItem(size: size)),
+                            children: List.generate(5, (index) => wojakItem(
+                                size: size,
+                               image : images_test[index]
+                            )),
                           ),
                         ],
                       ),

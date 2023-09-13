@@ -17,7 +17,7 @@ class Img_List extends StatelessWidget {
           aspectRatio: 16/9,
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.white.withOpacity(.5),
+                color: Colors.white.withOpacity(.1),
                 image: DecorationImage(
                   image: AssetImage(assetName),
 

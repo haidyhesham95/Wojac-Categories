@@ -8,7 +8,8 @@ import 'heartWidget.dart';
 
 Widget wojakItem (
 {
-  required Size size
+  required Size size,
+   String? image
 }
     ) {
   return  Container(
@@ -32,7 +33,7 @@ Widget wojakItem (
           ),
           child: Stack(
             children: [
-              Img_List(assetName: 'assets/images/maxresdefault (93).jpg'),
+              Img_List(assetName: image?? 'assets/images/Wojak_cropped.jpg'),
               Positioned(
                 top: 6,
                 right: 9,
