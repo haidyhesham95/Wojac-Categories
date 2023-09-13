@@ -22,7 +22,7 @@ class HeartWidget extends StatelessWidget {
         alignment: Alignment.center,
         child: LikeButton(
          size: 5.w > 25 ? 5.w : 25,
-         likeCountAnimationDuration: Duration(
+         likeCountAnimationDuration: const Duration(
            microseconds: 500
           ),
 

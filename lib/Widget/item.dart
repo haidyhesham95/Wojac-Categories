@@ -34,7 +34,7 @@ Widget wojakItem (
           child: Stack(
             children: [
               Img_List(assetName: image?? 'assets/images/Wojak_cropped.jpg'),
-              Positioned(
+              const Positioned(
                 top: 6,
                 right: 9,
                 child: HeartWidget(),
@@ -45,7 +45,7 @@ Widget wojakItem (
         ),
         Container(
           height: 40.h > 50 ? 40.h : 50,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
           bottomRight: Radius.circular(15),
@@ -71,7 +71,7 @@ Widget wojakItem (
                     ),
                     child: Container(
                      width: 35.w > 185 ? 35.w : 185,
-                      child: Column(
+                      child: const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(

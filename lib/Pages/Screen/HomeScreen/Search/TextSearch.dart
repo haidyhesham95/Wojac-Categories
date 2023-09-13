@@ -42,10 +42,10 @@ class _TextSearchState extends State<TextSearch> {
       keyboardType:TextInputType.text,
       decoration: InputDecoration(
         hintText: 'Search for wojaks ...',
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
             color: kWhite
         ),
-        prefixIcon:Icon(
+        prefixIcon:const Icon(
             Icons.search_sharp,
             color: kgreen),
         suffixIcon: GestureDetector(
@@ -59,17 +59,17 @@ class _TextSearchState extends State<TextSearch> {
           ),
         ),
 
-        fillColor: Color(0xffBEBEBE),
+        fillColor: const Color(0xffBEBEBE),
         focusedBorder: OutlineInputBorder(
           borderRadius:  BorderRadius.circular(15),
-          borderSide: BorderSide(
+          borderSide: const BorderSide(
             color: kgreen,
             width: 1.5,
           ),
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: kgreen,
               width:1.5,
             )

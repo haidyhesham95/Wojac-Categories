@@ -62,7 +62,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Visibility(
                         maintainAnimation: true,
                         maintainState: true,
@@ -95,7 +95,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Visibility(
                         maintainAnimation: true,
                         maintainState: true,
@@ -126,7 +126,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Visibility(
                         maintainAnimation: true,
                         maintainState: true,
@@ -155,7 +155,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Visibility(
                         maintainAnimation: true,
                         maintainState: true,
@@ -184,7 +184,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                             fontWeight: FontWeight.bold,
                             fontSize: 16),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Visibility(
                         maintainAnimation: true,
                         maintainState: true,
@@ -203,7 +203,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                 Container(
                   height: 50,
                   width: 450,
-                  child: TextSearch(),
+                  child: const TextSearch(),
                 ),
 
               ]),

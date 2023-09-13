@@ -18,7 +18,7 @@ class Splash extends StatelessWidget {
         backgroundColor: kGround,
         body: Center(
           child: DefaultTextStyle(
-           style: TextStyle(
+           style: const TextStyle(
                fontSize: 50,
                color: kWhite,fontWeight: FontWeight.bold),
            child: AnimatedTextKit(

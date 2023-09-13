@@ -15,7 +15,7 @@ class ListWojacFav extends StatelessWidget {
       child: GridView.count(
           crossAxisCount: 4,
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         childAspectRatio: 3/2,
         mainAxisSpacing: 30.h,
         crossAxisSpacing: 4.w,

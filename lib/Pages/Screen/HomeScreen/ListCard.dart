@@ -34,7 +34,7 @@ class ListCard extends StatelessWidget {
                   Container(
                       height: size.height*0.21,
                       width: size.width*0.12,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: kGround,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(15),

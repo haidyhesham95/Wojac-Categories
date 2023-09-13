@@ -27,7 +27,7 @@ class SignUp extends StatelessWidget {
             margin: EdgeInsets.all(5.w > 10 ? 5.w : 10),
             padding: EdgeInsets.all(5 > 2.w ? 5 : 2.w),
             child: Padding(
-              padding: EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,7 +69,7 @@ class SignUp extends StatelessWidget {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder:(context)=> SignIn(),
+                                builder:(context)=> const SignIn(),
                               ),
                             );
                           }

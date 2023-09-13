@@ -13,7 +13,7 @@ Widget adsenseAdsView(BuildContext context) {
         ..src = 'web/adview.html'
         ..style.border = 'none'
   );
-//zzon
+
   return const Flexible(
     child: HtmlElementView(
       viewType: 'adViewType',

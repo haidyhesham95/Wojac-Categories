@@ -22,7 +22,7 @@ class TopScreen extends StatelessWidget {
               const SizedBox(
                 height: 15,),
                Padding(
-                 padding: EdgeInsets.only(left: 60),
+                 padding: const EdgeInsets.only(left: 60),
                  child: Animation_Text(
                    text: 'Top',
                    asset: 'assets/images/4360-8958-star-animation.riv',

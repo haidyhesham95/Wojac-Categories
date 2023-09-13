@@ -14,7 +14,7 @@ class ButtonForget extends StatelessWidget {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder:(context)=> Forget_Password(),
+              builder:(context)=> const Forget_Password(),
             ),
           );
         },

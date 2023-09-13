@@ -18,7 +18,7 @@ class _Drop_MenuState extends State<Drop_Menu> {
     return
       CircleAvatar(
         radius: 30,
-        backgroundImage: AssetImage(
+        backgroundImage: const AssetImage(
           'assets/images/Wojak_cropped.jpg',
         ),
 
@@ -39,7 +39,7 @@ class _Drop_MenuState extends State<Drop_Menu> {
                        );
                },
               value: SampleItem.SignIn,
-              child: Text('Sign In'),
+              child: const Text('Sign In'),
             ),
             const PopupMenuItem<SampleItem>(
               value: SampleItem.Settings,
