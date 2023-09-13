@@ -2,12 +2,13 @@ import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 
-import '../../../Widget/Container_img_list.dart';
-import '../../../Widget/heartWidget.dart';
-import '../../../const/Colors.dart';
-import '../../../const/Styels.dart';
+import '../../../../Widget/Container_img_list.dart';
+import '../../../../const/Colors.dart';
+import '../../../../const/Styels.dart';
 
-Widget TopList({required Size size}) {
+
+
+Widget TopListAccount({required Size size}) {
   return Container(
     width: 75.w > 400 ? 75.w : 400,
     height: 212.h > 300 ? 212.h : 300,
@@ -25,7 +26,7 @@ Widget TopList({required Size size}) {
           child: Img_List(assetName: 'assets/images/wojacUp.jpg'),
         ),
         Container(
-          height: 50.h > 60 ? 50.h : 60,
+          height: 30.h > 40 ? 30.h : 40,
           decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -35,45 +36,27 @@ Widget TopList({required Size size}) {
           child: Padding(
             padding: const EdgeInsets.only(left: 8,right: 8),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'the first wojak title sjdhs jkashkdhkjsahd ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Icon(IconlyLight.image),
-                    SizedBox(
-                      width: 1.w,
-                    ),
-                    const Text('10'),
-                    SizedBox(
-                      width: 2.w,
+                    const Text(
+                      'the first wojak title sjdhs jkashkdhkjsahd ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const Icon(IconlyLight.heart),
                     SizedBox(
                       width: 1.w,
                     ),
                     const Text('20'),
-                    const Spacer(),
-                    Container(
-                      height: 20.h,
-                      width: 30.w > 130 ? 30.w : 130,
-                      decoration: BoxDecoration(
-                          color: kGround,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text('Follow', style: Styles.textStyle3bold),
-                      ),
-                    ),
+
+
                   ],
                 )
               ],
