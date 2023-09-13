@@ -14,6 +14,7 @@ import 'dart:html';
 import 'package:wojac_app/Pages/Splash/Splash.dart';
 import 'package:wojac_app/const/Colors.dart';
 
+import 'Pages/Screen/Account/Account.dart';
 import 'Pages/Screen/Home/Home.dart';
 import 'cubits/bloc_observer.dart';
 
