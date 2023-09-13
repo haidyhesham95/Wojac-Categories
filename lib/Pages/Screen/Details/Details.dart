@@ -38,42 +38,22 @@ class Details extends StatelessWidget {
                           child: ImgCount(),
                         ),
                         SizedBox(height: 8.h,),
-                        Padding(
-                          padding: EdgeInsets.only(
-                              left: 15.w,
-                          ),
-                          child: Container(
-                            constraints: BoxConstraints(
-                              maxWidth:size.width*0.30,
-
-                            ),
-                            child: Wrap(
-                              spacing: 2.5.w,
-                              runSpacing: 5.h,
-                              children: List.generate(
-                                         9,
-                                      (index) =>  TexCoun(
-                                        data: 'Wojak',
-                                        alignment: TextAlign.center,
-                                      )
-                              )
-                            ),
-                          ),
-                        ),
                       ],
                     ),
-                     SizedBox(width: 12.w,),
+                     SizedBox(
+                       width: 12.w,
+                     ),
                     Column(
                       children: [
-                        Container(
+                        SizedBox(
                           height: size.height*0.12,
                             width: size.width*0.50,
-                            child: TextSearch(),
+                            child: const TextSearch(),
                         ),
                       Container(
                         height: size.height*0.50,
                         width: size.width*0.50,
-                        decoration: BoxDecoration(
+                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             border: Border.all(
                               width: 2,
@@ -84,25 +64,17 @@ class Details extends StatelessWidget {
                          mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(top: 15,left: 200),
-                            child: Row(
-                              children: [
-                                Button(data: 'PNG',icon: Icons.arrow_circle_down,onPressed: (){},),
-                                SizedBox(width: 100,),
-                                Button(data: 'PNG',icon: Icons.photo,onPressed: (){},),
-                              ],
-                            ),
-                          ),
-                          SizedBox(height: 40,),
-
+                          //Title and tags
+                          SizedBox(
+                            height: 40.h
+                            ,),
                           Padding(
                             padding: const EdgeInsets.only(top: 15,left: 200),
                             child: Row(
                               children: [
                                 Button(data: 'Favorite',icon: Icons.favorite,onPressed: (){},),
-                                SizedBox(width: 100,),
-                                Button(data: 'Share',icon: Icons.share,onPressed: (){},),
+                                SizedBox(width: 5.w,),
+                                Button(data: 'PNG',icon: Icons.arrow_circle_down,onPressed: (){},),
                               ],
                             ),
                           ),
@@ -116,8 +88,10 @@ class Details extends StatelessWidget {
                     ),
                   ],
             ),
-                SizedBox(height: 70,),
-                NewList(),
+                SizedBox(
+                  height: 70.h,
+                ),
+
       ]
       ),
           ),
