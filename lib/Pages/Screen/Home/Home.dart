@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
+import 'package:wojac_app/Pages/Screen/Top_Screen/Top_Screen.dart';
 import 'package:wojac_app/Widget/ad_widegt.dart';
 import 'package:wojac_app/const/Colors.dart';
 
@@ -43,7 +44,7 @@ class Home extends StatelessWidget {
                  height: 15.h,
                ),
                //current screen
-               HomeScreen(),
+               TopScreen(),
 
 
 
