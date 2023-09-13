@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
             ),
 
             debugShowCheckedModeBanner: false,
-            home: TopScreen());
+            home: Home());
       },
     );
   }

@@ -24,10 +24,25 @@ class Home extends StatelessWidget {
              mainAxisSize: MainAxisSize.max,
              children: [
                TopBarContents(),
-               adsenseAdsView(context),
+               //ad
+               Padding(
+                 padding:  EdgeInsets.symmetric(
+                     horizontal: 5.w
+                 ),
+                 child: SizedBox(
+                   height: 120,
+                     child: Row(
+                       children: [
+                         adsenseAdsView(context)
+                       ],
+
+                     )
+                 ),
+               ),
                SizedBox(
                  height: 15.h,
                ),
+               //current screen
                HomeScreen(),
 
 

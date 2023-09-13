@@ -43,7 +43,6 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 15.h,),
                     ListCard(),
-
                      Animation_Text(
                        text: 'Latest Wojaks',
                        asset: 'assets/images/4407-9024-fire-loop.riv',

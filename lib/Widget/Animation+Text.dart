@@ -25,7 +25,7 @@ class Animation_Text extends StatelessWidget {
           SizedBox(
           height: 60.h,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                   text,

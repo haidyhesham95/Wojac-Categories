@@ -14,9 +14,7 @@ Widget adsenseAdsView(BuildContext context) {
         ..style.border = 'none'
   );
 
-  return SizedBox(
-    height: MediaQuery.sizeOf(context).height,
-    width: MediaQuery.sizeOf(context).width,
+  return const Flexible(
     child: HtmlElementView(
       viewType: 'adViewType',
     ),
