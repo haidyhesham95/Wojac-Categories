@@ -1,6 +1,7 @@
 import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
+import 'package:wojac_app/const/Fonts.dart';
 
 import '../../../../Widget/Container_img_list.dart';
 import '../../../../const/Colors.dart';
@@ -39,26 +40,36 @@ Widget TopListAccount({required Size size}) {
 
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    const Spacer(),
                     const Text(
                       'the first wojak title sjdhs jkashkdhkjsahd ',
                       style: TextStyle(
                         fontWeight: FontWeight.w900,
+                        fontFamily: Font.quicksand,
+                        fontSize: 15,
                       ),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
+                    SizedBox(width: 1.w,),
                     const Icon(IconlyLight.heart),
                     SizedBox(
                       width: 1.w,
                     ),
-                    const Text('20'),
-
+                    const Text('20',style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontFamily: Font.quicksand,
+                      fontSize: 15,
+                    ),),
+                    const Spacer(),
 
                   ],
-                )
+                ),
+                const Spacer(),
               ],
             ),
           ),

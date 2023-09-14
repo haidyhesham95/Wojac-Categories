@@ -1,5 +1,6 @@
 import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/const/img/img.dart';
 
 import '../../../const/Colors.dart';
 import '../../../const/Styels.dart';
@@ -22,10 +23,11 @@ class BorderCount extends StatelessWidget {
           )
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 10),
+        padding: const EdgeInsets.only(left: 10,right: 10),
         child: Row(
 
           children: [
+
             const CircleAvatar(
               backgroundImage: AssetImage('assets/images/profile.png'),
               radius: 25,
@@ -35,7 +37,7 @@ class BorderCount extends StatelessWidget {
               padding:  EdgeInsets.symmetric(
                 horizontal: 2.w
               ),
-              child: Text('Ahmed Zone',style: Styles.textStyle15,),
+              child: const Text('Ahmed Zone',style: Styles.textStyle15,),
             ),
             const Spacer(),
             Padding(
@@ -56,6 +58,8 @@ class BorderCount extends StatelessWidget {
 
               ),
             ),
+           Image.asset(img.warning),
+
           ],
         ),
       ),

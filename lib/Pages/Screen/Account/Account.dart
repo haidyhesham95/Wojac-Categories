@@ -22,7 +22,7 @@ class Account extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Padding(
-          padding: EdgeInsets.all(3.w),
+          padding: EdgeInsets.all(7.w),
           child: ListView(
             children: [
               Column(

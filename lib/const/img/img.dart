@@ -7,5 +7,6 @@ class img {
  static const  String heart= "assets/images/Achievements/heart.png";
  static const  String image= "assets/images/Achievements/image.png";
  static const  String img2= "assets/images/img2.png";
+ static const  String warning= "assets/images/Achievements/warning.png";
 
 }
