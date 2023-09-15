@@ -20,141 +20,128 @@ class Account extends StatelessWidget {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Container(
-        child: Padding(
-          padding: EdgeInsets.all(7.w),
-          child: ListView(
+      body: ListView(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ImageAccount(
-                        height: 0.55,
-                        width: 0.55,
-                        ImageImage: img.img2,
-                        colorAccount: kWhite,
-                      ),
-
-
-                      Padding(
-                        padding:
-                        const EdgeInsetsDirectional.only(top: 15, start: 25),
-                        child: Column(
-                          children: [
-                            Container(
-                                child: const Text(
-                                  "Ahmedzon",
-                                  style: TextStyle(
-                                      fontSize: 75,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: Font.quicksand,
-                                      color: Colors.white),
-                                )),
-                            SizedBox(
-                              height: 30.h,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                ImageAccount(
-                                  height: 0.080,
-                                  width: 0.080,
-                                  ImageImage: img.encrypted,
-                                  colorAccount: kGround,
-                                ),
-                                ImageAccount(
-                                  height: 0.080,
-                                  width: 0.080,
-                                  ImageImage: img.reward,
-                                  colorAccount: kGround,
-                                ),
-                                ImageAccount(
-                                  height: 0.080,
-                                  width: 0.080,
-                                  ImageImage: img.trophy2,
-                                  colorAccount: kGround,
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 35.h,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                const Icon(
-                                  IconlyLight.image,
-                                  color: Colors.white,
-                                  size: 50.5,
-                                ),
-                                SizedBox(
-                                  width: 1.w,
-                                ),
-                                const Text(
-                                  "200",
-                                  style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: Font.quicksand,
-                                      color: Colors.white),
-                                ),
-                                SizedBox(
-                                  width: 2.w,
-                                ),
-                                SizedBox(
-                                  height: 25.h,
-                                ),
-                                const Icon(
-                                  IconlyLight.heart,
-                                  color: Colors.white,
-                                  size: 50.5,
-                                ),
-                                SizedBox(
-                                  width: 1.w,
-                                ),
-                                const Text(
-                                  "400",
-                                  style: TextStyle(
-                                      fontSize: 40,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: Font.quicksand,
-                                      color: Colors.white),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 35.h,
-                            ),
-                            BorderCount(),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(height: 50,),
-
-                ],
-              ),
-              SizedBox(
-                width: MediaQuery.sizeOf(context).width,
-                child: Column(
+              Container(
+                margin: const EdgeInsetsDirectional.only(start: 33,top: 30),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Wrap(
-                      spacing: 15.w,
-                      runSpacing: 3.5.h > 10? 3.5.h : 10,
-                      children: List.generate(6, (index) => TopListAccount(size: size)),
+                    ImageAccount(
+                      height: 0.55,
+                      width: 0.55,
+                      ImageImage: img.img2,
+                      colorAccount: kWhite,
                     ),
+
+                    Padding(
+                      padding:
+                      const EdgeInsetsDirectional.only(top: 15, start: 25),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          const Text(
+                            "Ahmedzon",
+                            style: TextStyle(
+                                fontSize: 75,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: Font.quicksand,
+                                color: Colors.white),
+                          ),
+                          SizedBox(
+                            height: 30.h,
+                          ),
+                          Row(
+                              children: [
+                                Image.asset(img.encrypted),
+                                SizedBox(
+                                  width: 10.w,
+                                ),
+                                Image.asset(img.trophy),
+                                SizedBox(
+                                  width: 10.w,
+                                ),
+                                Image.asset(img.trophy2),
+                              ],
+                          ),
+                          SizedBox(
+                            height: 35.h,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const Icon(
+                                IconlyLight.image,
+                                color: Colors.white,
+                                size: 50.5,
+                              ),
+                              SizedBox(
+                                width: 1.w,
+                              ),
+                              const Text(
+                                "200",
+                                style: TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: Font.quicksand,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(
+                                width: 2.w,
+                              ),
+                              SizedBox(
+                                height: 25.h,
+                              ),
+                              const Icon(
+                                IconlyLight.heart,
+                                color: Colors.white,
+                                size: 50.5,
+                              ),
+                              SizedBox(
+                                width: 1.w,
+                              ),
+                              const Text(
+                                "400",
+                                style: TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: Font.quicksand,
+                                    color: Colors.white),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 35.h,
+                          ),
+                          const BorderCount(),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
+               SizedBox(height: 50.h,),
+
             ],
           ),
-        ),
+          SizedBox(
+            width: MediaQuery.sizeOf(context).width,
+            child: Column(
+              children: [
+                Wrap(
+                  spacing: 15.w,
+                  runSpacing: 3.5.h > 10? 3.5.h : 10,
+                  children: List.generate(6, (index) => TopListAccount(size: size)),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

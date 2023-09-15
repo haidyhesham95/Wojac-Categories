@@ -35,7 +35,7 @@ Widget TopListAccount({required Size size}) {
                   bottomLeft: Radius.circular(15))),
 
           child: Padding(
-            padding: const EdgeInsets.only(left: 8,right: 8),
+            padding: const EdgeInsets.only(left: 5,right: 5),
             child: Column(
 
               crossAxisAlignment: CrossAxisAlignment.start,
