@@ -9,8 +9,6 @@ import 'package:wojac_app/const/Colors.dart';
 import '../../navbar/top_bar_contents.dart';
 import '../HomeScreen/Search/TextSearch.dart';
 
-
-
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -19,38 +17,31 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: kGround,
-         body: SingleChildScrollView(
-           child: Column(
-             crossAxisAlignment: CrossAxisAlignment.center,
-             mainAxisSize: MainAxisSize.max,
-             children: [
-               TopBarContents(),
-               //ad
-               Padding(
-                 padding:  EdgeInsets.symmetric(
-                     horizontal: 5.w
-                 ),
-                 child: SizedBox(
-                   height: 120,
-                     child: Row(
-                       children: [
-                         adsenseAdsView(context)
-                       ],
-
-                     )
-                 ),
-               ),
-               SizedBox(
-                 height: 15.h,
-               ),
-               //current screen
-               TopScreen(),
-
-
-
-             ],
-           ),
-         ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              TopBarContents(),
+              //ad
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: SizedBox(
+                    height: 120,
+                    child: Row(
+                      children: [
+                        adsenseAdsView(context),
+                      ],
+                    )),
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              //current screen
+              TopScreen(),
+            ],
+          ),
+        ),
       ),
     );
   }
