@@ -48,11 +48,31 @@ abstract class Styles {
   static TextStyle textStyle6sp = TextStyle(
       color: kWhite,
       fontWeight: FontWeight.bold,
+ taha_details_screen
       fontSize: 6.sp > 25 ? 6.sp : 25);
   static TextStyle textStyle3bold = TextStyle(
       color: kWhite,
       fontWeight: FontWeight.bold,
       fontSize: 3.w > 15 ? 3.w : 15);
+
+      fontSize: 3.w > 15 ? 3.w : 15
+
+
+  );
+
+
+
+
+  static TextStyle textStyle75=TextStyle(
+      color: kWhite,
+      fontWeight: FontWeight.bold,
+      fontSize: 5.w > 30 ? 5.w : 30
+
+
+  );
+
+
+
 }
 
 const TextStyle textStyle = TextStyle();
