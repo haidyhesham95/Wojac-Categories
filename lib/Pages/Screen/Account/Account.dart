@@ -9,7 +9,7 @@ import '../../../const/Fonts.dart';
 import '../../../const/Styels.dart';
 import '../../../const/img/img.dart';
 import '../Details/Countiner-Border.dart';
-import '../Details/Countiner-image.dart';
+import '../Details/wojac_details_image.dart';
 import '../Top_Screen/Top_List.dart';
 import '../Top_Screen/Top_Screen.dart';
 import 'widget/TopListAccount.dart';
