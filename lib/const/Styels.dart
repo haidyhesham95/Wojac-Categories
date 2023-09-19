@@ -58,8 +58,6 @@ abstract class Styles {
 
 
 
-
-
   static TextStyle textStyle75=TextStyle(
       color: kWhite,
       fontWeight: FontWeight.bold,
