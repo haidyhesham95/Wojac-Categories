@@ -28,71 +28,67 @@ class Account extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                margin:  EdgeInsetsDirectional.only(start: 15, top: 30.h),
-
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                margin: EdgeInsetsDirectional.only(start: 15, top: 30.h),
+                child: Wrap(
+                  alignment: WrapAlignment.start,
+                  direction: Axis.horizontal,
                   children: [
-                    ImageAccount(
-                      height: 0.55,
-                      width: 0.55,
-                      ImageImage: img.img2,
-                      colorAccount: kWhite,
+                    Container(
+                      height: 110.sp<223?300:110.sp,
+                      width: 200.w<388?700:200.w,
+                      decoration: BoxDecoration(
+                        color: kWhite,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Image.asset(
+                        img.img2,
+                      ),
                     ),
                     Padding(
-                      padding:
-                          const EdgeInsetsDirectional.only( start: 25),
+                      padding: const EdgeInsetsDirectional.only(start: 25),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisSize: MainAxisSize.max,
                         children: [
                           Text(
                             "Ahmedzon",
                             style: TextStyle(
-                                fontSize: 18.sp,
+                                fontSize: 18.sp<35?60:18.sp,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: Font.quicksand,
-                                color: Colors.white
-                            ),
+                                color: Colors.white),
                           ),
-                          SizedBox(height: 20,),
-                          Container(
-                            width: 100.sp,
-                            height: 90.h,
-                            child: Row(
+                          SizedBox(
+                            height:8.sp<12?5:8.sp,
+                          ),
+                          Wrap(
+                            alignment: WrapAlignment.start,
                               children: [
                                 Image.asset(
-                                  img.encrypted,
-                                  width: 25.w,
-                                  height: 90.h,
-                                  fit: BoxFit.cover,
+                                  img.trophy,
+                                  width:16.w<40?70:16.w,
+                                  height: 80.h<107?80:80.h,
+                                  fit: BoxFit.fill,
                                 ),
-                                Spacer(),
-
+                                SizedBox(width: 3.w,),
                                 Image.asset(
                                   img.trophy,
-                                  width: 23.w,
-                                  height: 75.h,
-                                  fit: BoxFit.cover,
-                                ),
-                                Spacer(),
-                                Image.asset(
-                                  img.trophy2,
-                                  width: 15.w,
-                                  height: 75.h,
-                                  fit: BoxFit.cover,
+                                  width:16.w<40?70:16.w,
+                                  height: 80.h<107?80:80.h,
+                                  fit: BoxFit.fill,
                                 ),
                               ],
                             ),
+                          SizedBox(
+                            height:8.sp<12?7:8.sp,
                           ),
-                          SizedBox(height: 20,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                          Wrap(
+                            alignment: WrapAlignment.start,
+                            direction: Axis.horizontal,
                             children: [
                               Icon(
                                 IconlyLight.image,
                                 color: Colors.white,
-                                size: 18.5.sp,
+                                size: 18.5.sp<30?50:18.sp,
                               ),
                               SizedBox(
                                 width: 1.w,
@@ -100,7 +96,7 @@ class Account extends StatelessWidget {
                               Text(
                                 "200",
                                 style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 15.5.sp<25?35:15.5.sp,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: Font.quicksand,
                                     color: Colors.white),
@@ -114,7 +110,7 @@ class Account extends StatelessWidget {
                               Icon(
                                 IconlyLight.heart,
                                 color: Colors.white,
-                                size: 18.5.sp,
+                                size: 18.5.sp<30?50:18.sp,
                               ),
                               SizedBox(
                                 width: 1.w,
@@ -122,16 +118,20 @@ class Account extends StatelessWidget {
                               Text(
                                 "400",
                                 style: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 15.5.sp<25?35:15.5.sp,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: Font.quicksand,
                                     color: Colors.white),
                               )
                             ],
                           ),
-                          SizedBox(height: 20,),
+                          SizedBox(
+                            height:8.sp<12?5:8.sp,
+                          ),
                           const BorderCountAccount(),
-
+                            MaterialButton(onPressed: (){
+                              print(18.5.sp);
+                            })
                         ],
                       ),
                     )
@@ -139,7 +139,7 @@ class Account extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50.h,
+                height: 20.sp<30?0:20.sp,
               ),
             ],
           ),
