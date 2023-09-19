@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/Widget/item.dart';
 import 'package:wojac_app/const/Colors.dart';
 import '../../../Widget/details_search_bar.dart';
 import '../../../Widget/details_wojac_widget.dart';
@@ -28,7 +29,15 @@ class Details extends StatelessWidget {
                   runSpacing: 3.5.h > 10 ? 3.5.h : 10,
                   alignment: WrapAlignment.center,
                   children: [
-                    WojacDetailsImage(size: size),
+                    SizedBox(
+                        height: size.height * 0.8,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            WojacDetailsImage(size: size),
+                          ],
+                        )
+                    ),
                     // Text(
                     //   'width: ${size.width}',
                     //   style: Styles.textStyle25,
@@ -65,11 +74,11 @@ class Details extends StatelessWidget {
                 child: Column(
                   children: [
                     Wrap(
-                      spacing: 4.w,
-                      runSpacing: 3.5.h > 10 ? 3.5.h : 10,
+                      spacing: 10.w,
+                      runSpacing: 3.5.h > 10? 3.5.h : 10,
                       children: List.generate(
                         5,
-                        (index) => DetailsWojacWidget(size: size),
+                        (index) => wojakItem(size: size),
                       ),
                     ),
                   ],
