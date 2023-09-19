@@ -50,6 +50,7 @@ dependencies:
   webview_flutter: ^4.2.4
   webview_flutter_android: ^3.9.5
 
+
   flutter_animate: ^4.2.0+1
 
 
