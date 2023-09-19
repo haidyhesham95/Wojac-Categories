@@ -2,16 +2,12 @@ import 'package:flutter/Material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:iconly/iconly.dart';
 import 'package:wojac_app/Pages/Screen/Account/widget/BorderCountAccount.dart';
-import 'package:wojac_app/Pages/Screen/account/widget/image.dart';
 
 import '../../../const/Colors.dart';
 import '../../../const/Fonts.dart';
-import '../../../const/Styels.dart';
+
 import '../../../const/img/img.dart';
-import '../Details/Countiner-Border.dart';
-import '../Details/wojac_details_image.dart';
-import '../Top_Screen/Top_List.dart';
-import '../Top_Screen/Top_Screen.dart';
+
 import 'widget/TopListAccount.dart';
 
 class Account extends StatelessWidget {
@@ -34,8 +30,8 @@ class Account extends StatelessWidget {
                   direction: Axis.horizontal,
                   children: [
                     Container(
-                      height: 110.sp<223?300:110.sp,
-                      width: 200.w<388?700:200.w,
+                      height: 110.sp < 223 ? 300 : 110.sp,
+                      width: 200.w < 388 ? 700 : 200.w,
                       decoration: BoxDecoration(
                         color: kWhite,
                         borderRadius: BorderRadius.circular(15),
@@ -52,34 +48,36 @@ class Account extends StatelessWidget {
                           Text(
                             "Ahmedzon",
                             style: TextStyle(
-                                fontSize: 18.sp<35?60:18.sp,
+                                fontSize: 18.sp < 35 ? 60 : 18.sp,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: Font.quicksand,
                                 color: Colors.white),
                           ),
                           SizedBox(
-                            height:8.sp<12?5:8.sp,
+                            height: 8.sp < 12 ? 5 : 8.sp,
                           ),
                           Wrap(
                             alignment: WrapAlignment.start,
-                              children: [
-                                Image.asset(
-                                  img.trophy,
-                                  width:16.w<40?70:16.w,
-                                  height: 80.h<107?80:80.h,
-                                  fit: BoxFit.fill,
-                                ),
-                                SizedBox(width: 3.w,),
-                                Image.asset(
-                                  img.trophy,
-                                  width:16.w<40?70:16.w,
-                                  height: 80.h<107?80:80.h,
-                                  fit: BoxFit.fill,
-                                ),
-                              ],
-                            ),
+                            children: [
+                              Image.asset(
+                                img.trophy,
+                                width: 16.w < 40 ? 70 : 16.w,
+                                height: 80.h < 107 ? 80 : 80.h,
+                                fit: BoxFit.fill,
+                              ),
+                              SizedBox(
+                                width: 3.w,
+                              ),
+                              Image.asset(
+                                img.trophy,
+                                width: 16.w < 40 ? 70 : 16.w,
+                                height: 80.h < 107 ? 80 : 80.h,
+                                fit: BoxFit.fill,
+                              ),
+                            ],
+                          ),
                           SizedBox(
-                            height:8.sp<12?7:8.sp,
+                            height: 8.sp < 12 ? 7 : 8.sp,
                           ),
                           Wrap(
                             alignment: WrapAlignment.start,
@@ -88,7 +86,7 @@ class Account extends StatelessWidget {
                               Icon(
                                 IconlyLight.image,
                                 color: Colors.white,
-                                size: 18.5.sp<30?50:18.sp,
+                                size: 18.5.sp < 30 ? 50 : 18.sp,
                               ),
                               SizedBox(
                                 width: 1.w,
@@ -96,7 +94,7 @@ class Account extends StatelessWidget {
                               Text(
                                 "200",
                                 style: TextStyle(
-                                    fontSize: 15.5.sp<25?35:15.5.sp,
+                                    fontSize: 15.5.sp < 25 ? 35 : 15.5.sp,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: Font.quicksand,
                                     color: Colors.white),
@@ -110,7 +108,7 @@ class Account extends StatelessWidget {
                               Icon(
                                 IconlyLight.heart,
                                 color: Colors.white,
-                                size: 18.5.sp<30?50:18.sp,
+                                size: 18.5.sp < 30 ? 50 : 18.sp,
                               ),
                               SizedBox(
                                 width: 1.w,
@@ -118,7 +116,7 @@ class Account extends StatelessWidget {
                               Text(
                                 "400",
                                 style: TextStyle(
-                                    fontSize: 15.5.sp<25?35:15.5.sp,
+                                    fontSize: 15.5.sp < 25 ? 35 : 15.5.sp,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: Font.quicksand,
                                     color: Colors.white),
@@ -126,12 +124,10 @@ class Account extends StatelessWidget {
                             ],
                           ),
                           SizedBox(
-                            height:8.sp<12?5:8.sp,
+                            height: 8.sp < 12 ? 10 : 8.sp,
                           ),
                           const BorderCountAccount(),
-                            MaterialButton(onPressed: (){
-                              print(18.5.sp);
-                            })
+                          MaterialButton(onPressed: () {})
                         ],
                       ),
                     )
@@ -139,7 +135,7 @@ class Account extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20.sp<30?0:20.sp,
+                height: 20.sp < 30 ? 0 : 20.sp,
               ),
             ],
           ),
