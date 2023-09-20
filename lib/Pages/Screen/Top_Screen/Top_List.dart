@@ -22,23 +22,23 @@ Widget TopList({required Size size}) {
               border: Border(
                   bottom: BorderSide(
                       color: kGround.withOpacity(.7), width: 0.45.w))),
-          child: Img_List(assetName: 'assets/images/maxresdefault (93).jpg'),
+          child: Img_List(assetName: 'assets/images/wojacUp.jpg'),
         ),
         Container(
           height: 50.h > 60 ? 50.h : 60,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(15),
                   bottomLeft: Radius.circular(15))),
 
           child: Padding(
-            padding: EdgeInsets.only(left: 8,right: 8),
+            padding: const EdgeInsets.only(left: 8,right: 8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'the first wojak title sjdhs jkashkdhkjsahd ',
                   style: TextStyle(
                     fontWeight: FontWeight.w900,
@@ -49,20 +49,20 @@ Widget TopList({required Size size}) {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Icon(IconlyLight.image),
+                    const Icon(IconlyLight.image),
                     SizedBox(
                       width: 1.w,
                     ),
-                    Text('10'),
+                    const Text('10'),
                     SizedBox(
                       width: 2.w,
                     ),
-                    Icon(IconlyLight.heart),
+                    const Icon(IconlyLight.heart),
                     SizedBox(
                       width: 1.w,
                     ),
-                    Text('20'),
-                    Spacer(),
+                    const Text('20'),
+                    const Spacer(),
                     Container(
                       height: 20.h,
                       width: 30.w > 130 ? 30.w : 130,

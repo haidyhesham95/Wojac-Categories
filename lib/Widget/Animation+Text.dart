@@ -43,6 +43,7 @@ class Animation_Text extends StatelessWidget {
                 asset,
                 useArtboardSize: true,
 
+
               ),
             ],
           ),

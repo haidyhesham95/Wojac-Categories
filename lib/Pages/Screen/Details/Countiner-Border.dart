@@ -1,4 +1,6 @@
 import 'package:flutter/Material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/const/img/img.dart';
 
 import '../../../const/Colors.dart';
 import '../../../const/Styels.dart';
@@ -21,27 +23,23 @@ class BorderCount extends StatelessWidget {
           )
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 10),
+        padding: const EdgeInsets.only(left: 10,right: 10),
         child: Row(
 
           children: [
-            CircleAvatar(
+
+            const CircleAvatar(
               backgroundImage: AssetImage('assets/images/profile.png'),
               radius: 25,
             ),
 
             Padding(
-              padding: const EdgeInsets.only(top:21 ,left: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Ahmed Zone',style: Styles.textStyle15,),
-                  SizedBox(height: 5,),
-                  Text('View all ',style: TextStyle(color: Colors.white),),
-                ],
+              padding:  EdgeInsets.symmetric(
+                horizontal: 2.w
               ),
+              child: const Text('Ahmed Zone',style: Styles.textStyle15,),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: Container(
@@ -52,7 +50,7 @@ class BorderCount extends StatelessWidget {
                     style: TextButton.styleFrom(
                       backgroundColor: kgreen,
                     ),
-                    child:  Text(
+                    child:  const Text(
                       'Follow',style:Styles.textStyle18,
 
                     )
@@ -60,6 +58,8 @@ class BorderCount extends StatelessWidget {
 
               ),
             ),
+           Image.asset(img.warning),
+
           ],
         ),
       ),

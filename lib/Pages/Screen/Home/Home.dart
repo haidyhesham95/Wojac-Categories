@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
 import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
+import 'package:wojac_app/Pages/Screen/Top_Screen/Top_Screen.dart';
 import 'package:wojac_app/Widget/ad_widegt.dart';
 import 'package:wojac_app/const/Colors.dart';
 
 import '../../navbar/top_bar_contents.dart';
 import '../HomeScreen/Search/TextSearch.dart';
-
-
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -18,38 +17,31 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: kGround,
-         body: SingleChildScrollView(
-           child: Column(
-             crossAxisAlignment: CrossAxisAlignment.center,
-             mainAxisSize: MainAxisSize.max,
-             children: [
-               TopBarContents(),
-               //ad
-               Padding(
-                 padding:  EdgeInsets.symmetric(
-                     horizontal: 5.w
-                 ),
-                 child: SizedBox(
-                   height: 120,
-                     child: Row(
-                       children: [
-                         adsenseAdsView(context)
-                       ],
-
-                     )
-                 ),
-               ),
-               SizedBox(
-                 height: 15.h,
-               ),
-               //current screen
-               HomeScreen(),
-
-
-
-             ],
-           ),
-         ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              TopBarContents(),
+              //ad
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.w),
+                child: SizedBox(
+                    height: 120,
+                    child: Row(
+                      children: [
+                        adsenseAdsView(context),
+                      ],
+                    )),
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              //current screen
+              TopScreen(),
+            ],
+          ),
+        ),
       ),
     );
   }

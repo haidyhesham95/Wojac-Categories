@@ -9,7 +9,7 @@ class MenuDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Color(0xFF077bd7),
+        color: const Color(0xFF077bd7),
         child: Padding(
 
           padding: const EdgeInsets.all(16.0),
@@ -19,19 +19,19 @@ class MenuDrawer extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Home',
                   style: TextStyle(color: Colors.black, fontSize: 22),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
                   color: Colors.black,
                   thickness: 2,
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(

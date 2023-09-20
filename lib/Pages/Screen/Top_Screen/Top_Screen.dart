@@ -12,43 +12,40 @@ class TopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return  SafeArea(
-      child: Scaffold(
-        body:
-        SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 15,),
-               Padding(
-                 padding: EdgeInsets.only(left: 60),
-                 child: Animation_Text(
-                   text: 'Top',
-                   asset: 'assets/images/4360-8958-star-animation.riv',
-                 ),
-               ),
-              SizedBox(
-                height: 15.h
-                ,),
-              SizedBox(
-                width: MediaQuery.sizeOf(context).width,
-                child: Column(
-                  children: [
-                    Wrap(
-                      spacing: 15.w,
-                      runSpacing: 3.5.h > 10? 3.5.h : 10,
-                      children: List.generate(6, (index) => TopList(size: size)),
-                    ),
-                  ],
-                ),
+    return ListView(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(
+              height: 15,),
+            Padding(
+              padding: const EdgeInsets.only(left: 60),
+              child: Animation_Text(
+                text: 'Top',
+                asset: 'assets/images/4360-8958-star-animation.riv',
               ),
-            ],
-          ),
-        ),
-
-
-      ),
+            ),
+            SizedBox(
+              height: 15.h
+              ,),
+            SizedBox(
+              width: MediaQuery.sizeOf(context).width,
+              child: Column(
+                children: [
+                  Wrap(
+                    spacing: 15.w,
+                    runSpacing: 3.5.h > 10? 3.5.h : 10,
+                    children: List.generate(6, (index) => TopList(size: size)),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        )
+      ],
     );
   }
 }
