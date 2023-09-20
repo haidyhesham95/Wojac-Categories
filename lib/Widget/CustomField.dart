@@ -5,11 +5,11 @@ import 'package:wojac_app/const/Styels.dart';
 import '../const/Colors.dart';
 
 class CustomField extends StatelessWidget {
-   CustomField({super.key, required this.hintText,required this.keyboardType, required this.obscureText,required this.data});
+   CustomField({super.key, required this.hintText,required this.keyboardType, required this.obscureText, required this.data});
   String? hintText;
    bool obscureText ;
    TextInputType? keyboardType;
-   String data;
+  final String data;
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,8 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:wojac_app/Pages/Screen/HomeScreen/HomeScreen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wojac_app/Widget/Elevate_Button.dart';
 import 'package:wojac_app/const/Colors.dart';
+import 'package:wojac_app/const/Styels.dart';
 
+import '../Screen/HomeScreen/Dialog/Dialog.dart';
 import '../Screen/HomeScreen/Search/TextSearch.dart';
 import '../Screen/HomeScreen/drop_menu/drop_menu.dart';
 
@@ -38,11 +40,10 @@ class _TopBarContentsState extends State<TopBarContents> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: screenSize.width / 15,
+                 width: 8.w > 1 ? 8.w : 1,
                 ),
-
                 Drop_Menu(),
-                SizedBox(width: screenSize.width / 25),
+                SizedBox(width: 20.w > 1 ? 20.w : 1,),
                 InkWell(
                   onHover: (value) {
                     setState(() {
@@ -77,7 +78,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     ],
                   ),
                 ),
-                SizedBox(width: screenSize.width / 25),
+                SizedBox(width: 18.w > 1 ? 18.w : 1,),
                 InkWell(
                   onHover: (value) {
                     setState(() {
@@ -106,7 +107,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     ],
                   ),
                 ),
-                SizedBox(width: screenSize.width / 25),
+                SizedBox(width: 18.w > 1 ? 18.w : 1,),
                 InkWell(
                   onHover: (value) {
                     setState(() {
@@ -120,7 +121,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Community',
+                        'Favourite',
                         style: TextStyle(
                             color: _isHovering[2] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
@@ -137,7 +138,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     ],
                   ),
                 ),
-                SizedBox(width: screenSize.width / 25),
+                SizedBox(width: 15.w > 1 ? 15.w : 1,),
                 InkWell(
                   onHover: (value) {
                     setState(() {
@@ -149,7 +150,7 @@ class _TopBarContentsState extends State<TopBarContents> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Categories',
+                        'About',
                         style: TextStyle(
                             color: _isHovering[3] ? kgreen : kWhite,
                             fontWeight: FontWeight.bold,
@@ -166,45 +167,33 @@ class _TopBarContentsState extends State<TopBarContents> {
                     ],
                   ),
                 ),
-                SizedBox(width: screenSize.width / 25),
-                InkWell(
-                  onHover: (value) {
-                    setState(() {
-                      value ? _isHovering[4] = true : _isHovering[4] = false;
-                    });
-                  },
-                  onTap: () {},
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
+
+                Flexible(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'About',
-                        style: TextStyle(
-                            color: _isHovering[4] ? kgreen : kWhite,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16),
+                      SizedBox(
+                        width: 130.w > 2 ? 130.w : 2,
+                        height: 48.h > 10 ? 48.h : 10,
+                        child: TextSearch(),
                       ),
-                      SizedBox(height: 5),
-                      Visibility(
-                        maintainAnimation: true,
-                        maintainState: true,
-                        maintainSize: true,
-                        visible: _isHovering[4],
-                        child: Container(
-                          height: 2,
-                          width: 20,
-                          color: kWhite,
-                        ),
-                      )
+                      SizedBox(width: 10.w > 1 ? 10.w : 1,),
+                      SizedBox(
+                        width: 40.w > 40 ? 40.w : 40,
+                        height: 35.h > 35 ? 35.h : 35,
+                        child: Elevate_Button(
+                            onPressed: (){
+                              showDialog(
+                                context: context,
+                                builder: (_) => Dialogg(),
+                              );
+                            }, backgroundColor: kWhite, foregroundColor: kGround, text:'Share Your Work', )
+                      ),
+                      SizedBox(width: 8.w > 1 ? 8.w : 1,),
                     ],
                   ),
                 ),
-                SizedBox(width: screenSize.width / 25),
-                Container(
-                  height: 50,
-                  width: 450,
-                  child: TextSearch(),
-                ),
+
 
               ]),
         ),

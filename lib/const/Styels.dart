@@ -84,6 +84,28 @@ abstract class Styles {
 
 
   );
+  static TextStyle textStyle315bold=TextStyle(
+    color: kGround,
+    fontWeight: FontWeight.bold,
+    fontSize: 3.sp > 15 ? 3.sp : 15,
+
+
+  );
+  static TextStyle textStyle3spg=TextStyle(
+
+      fontSize: 3.sp > 15 ? 3.sp : 15,
+      color: kgreen
+
+
+  );
+
+  static TextStyle textStyle316bold=TextStyle(
+      fontWeight: FontWeight.bold,
+      color: kWhite,
+      fontSize: 3.w > 16 ? 3.w : 16
+
+
+  );
 
 
 
