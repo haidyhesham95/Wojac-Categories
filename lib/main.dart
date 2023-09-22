@@ -48,27 +48,23 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               scaffoldBackgroundColor: kGround,
 
-              scrollbarTheme: ScrollbarThemeData(
-                  thumbColor: MaterialStateProperty.all(kWhite)),
-              textTheme:
-                  GoogleFonts.quicksandTextTheme(Theme.of(context).textTheme)),
-          debugShowCheckedModeBanner: false,
-          home: FavoriteScreen(),
-
-                scrollbarTheme: ScrollbarThemeData(
-                    thumbColor: MaterialStateProperty.all(kWhite)
+            scrollbarTheme: ScrollbarThemeData(
+            thumbColor: MaterialStateProperty.all(kWhite)
 
 
-                ),
-              textTheme: GoogleFonts.quicksandTextTheme(
-                Theme.of(context).textTheme
-              )
+        ),
+        textTheme: GoogleFonts.quicksandTextTheme(
+        Theme.of(context).textTheme
+        )
+
 
             ),
+        debugShowCheckedModeBanner: false,
+        home: Account(),
 
-            debugShowCheckedModeBanner: false,
-            home: Account(),
+
         );
+
       },
     );
   }
