@@ -13,7 +13,7 @@ class BorderCountAccount extends StatelessWidget {
      var size=MediaQuery.of(context).size;
     return Container(
       height: size.height*0.10,
-      width:100.w,
+      width:100.w<256?350:100.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: kGround,
@@ -30,35 +30,37 @@ class BorderCountAccount extends StatelessWidget {
 
             CircleAvatar(
               backgroundImage: AssetImage('assets/images/profile.png'),
-              radius: 7.sp,
+              radius: 7.sp<14?25:7.sp,
             ),
 
             Padding(
               padding:  EdgeInsets.symmetric(
                   horizontal: 2.w
               ),
-              child:  Text('Ahmed Zone',style: TextStyle(fontSize: 5.sp,fontWeight: FontWeight.w800,color: Colors.white),),
+              child:  Text('Ahmed Zone',style: TextStyle(fontSize: 5.sp<15?15:5.sp,fontWeight: FontWeight.w800,color: Colors.white),),
             ),
             const Spacer(),
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: Container(
                 height: size.height*0.045,
-                width: size.width*0.065,
+                width: 33.sp<140?60:33.sp,
                 child: TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: kgreen,
                     ),
                     child:   Text(
-                      'Follow',style: TextStyle(fontSize: 5.sp,color: Colors.white),
+                      'Follow',style: TextStyle(fontSize: 5.sp<22?13:5.sp,color: Colors.white),
 
                     )
                 ),
 
               ),
             ),
-            Image.asset(img.warning,height: 10.sp,width: 10.sp,),
+            InkWell(onTap:(){},child: Image.asset(img.warning,height: 10.sp<16?20:10.sp,width: 10.sp<16?20:10.sp)),
 
           ],
         ),

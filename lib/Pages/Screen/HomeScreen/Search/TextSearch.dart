@@ -29,11 +29,7 @@ class _TextSearchState extends State<TextSearch> {
   Widget build(BuildContext context) {
     return TextField(
     cursorColor: kgreen,
-      style: fontStyle(
-         weight: FontWeight.bold,
-          color: kGround,
-         fontSize: 3.w > 16 ? 3.w : 16
-      ),
+      style: Styles.textStyle316bold,
       onChanged: (value){},
       onSubmitted:(value){
         log(searchTextController.text as num);
@@ -42,12 +38,12 @@ class _TextSearchState extends State<TextSearch> {
       keyboardType:TextInputType.text,
       decoration: InputDecoration(
         hintText: 'Search for wojaks ...',
-        hintStyle: const TextStyle(
+        hintStyle: TextStyle(
             color: kWhite
         ),
-        prefixIcon:const Icon(
+        prefixIcon:Icon(
             Icons.search_sharp,
-            color: kgreen),
+            color: Colors.grey.shade400),
         suffixIcon: GestureDetector(
           onTap: (){
             searchTextController.clear();
@@ -55,22 +51,23 @@ class _TextSearchState extends State<TextSearch> {
           },
           child: Icon(
               Icons.close,
-              color: kgreen.withOpacity(.8)
+              color: kgreen
           ),
         ),
 
-        fillColor: const Color(0xffBEBEBE),
+        //fillColor: Color(0xffBEBEBE),
+        //focusColor: kWhite,
         focusedBorder: OutlineInputBorder(
           borderRadius:  BorderRadius.circular(15),
-          borderSide: const BorderSide(
-            color: kgreen,
+          borderSide: BorderSide(
+            color: kWhite,
             width: 1.5,
           ),
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(
-              color: kgreen,
+            borderSide: BorderSide(
+              color: kWhite,
               width:1.5,
             )
         ),
