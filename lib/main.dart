@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignIn/SignIn.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignUp/SignUp.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
+import 'package:wojac_app/Pages/Screen/FavoriteScreen/favoriteScreen.dart';
 import 'package:wojac_app/Pages/Screen/Top_Screen/Top_Screen.dart';
 
 import 'dart:html';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
               textTheme:
                   GoogleFonts.quicksandTextTheme(Theme.of(context).textTheme)),
           debugShowCheckedModeBanner: false,
-          home: Details(),
+          home: FavoriteScreen(),
         );
       },
     );

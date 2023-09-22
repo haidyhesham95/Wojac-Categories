@@ -15,6 +15,7 @@ class FavoriteScreen extends StatelessWidget {
        child: Column(
          children: [
            TopContainer(width: size.width),
+
            FavGridView(size: size,)
          ],
        ),

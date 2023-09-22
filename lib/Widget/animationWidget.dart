@@ -74,7 +74,13 @@ class _CustomAnimatedWidgetState extends State<CustomAnimatedWidget> with Single
         FadeEffect(begin: 0.5, end: 1),
       ],
       child: InkWell(
-          child: widget.child
+          child: widget.child,
+        overlayColor: MaterialStateColor.resolveWith((states) => Colors.transparent),
+        onTap: (){
+            anim.forward(
+              from: 0
+            );
+        },
       ),
       controller: anim,
       autoPlay: widget.autoPlay ?? true,
