@@ -23,141 +23,195 @@ class Account extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
+          Wrap(
             children: [
-              Container(
-                margin: EdgeInsetsDirectional.only(start: 15, top: 30.h),
-                child: Wrap(
-                  alignment: WrapAlignment.start,
-                  direction: Axis.horizontal,
-                  children: [
-                    Container(
-                      height: 110.sp<223?300:110.sp,
-                      width: 200.w<388?700:200.w,
-                      decoration: BoxDecoration(
-                        color: kWhite,
-                        borderRadius: BorderRadius.circular(15),
+              Padding(
+                padding:  EdgeInsets.symmetric(
+                  horizontal: 3.w,
+                  vertical: 5.h
+
+                ),
+                child: Container(
+                  height: MediaQuery.sizeOf(context).width < 920 ? 400 : 390.h,
+                  width: MediaQuery.sizeOf(context).width < 920 ? double.infinity : 200.w,
+                  decoration: BoxDecoration(
+                    color: kWhite,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.asset(
+                    img.img2,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: MediaQuery.sizeOf(context).width < 920 ?
+                EdgeInsets.symmetric(
+                    horizontal: 3.w,
+                    vertical: 5.h
+                )
+                    :
+                EdgeInsets.symmetric(
+                    horizontal: 0.0,
+                    vertical: 5.h
+                ),
+                child: Container (
+                  width: MediaQuery.sizeOf(context).width < 920 ? double.infinity : MediaQuery.sizeOf(context).width -  208.w ,
+                  height: MediaQuery.sizeOf(context).width < 920 ? null : 390.h,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisSize: MediaQuery.sizeOf(context).width < 920 ? MainAxisSize.min : MainAxisSize.max,
+                    children: [
+                     if( MediaQuery.sizeOf(context).width > 920 )
+                      Text(
+                        "Ahmedzon",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontSize: 40 > 12.sp ? 40 : 12.sp,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: Font.quicksand,
+                            color: Colors.white
+                        ),
                       ),
-                      child: Image.asset(
-                        img.img2,
+                      if( MediaQuery.sizeOf(context).width > 920 )
+                      SizedBox(
+                        height:1.h,
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.only(start: 25),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Ahmedzon",
-                            style: TextStyle(
-                                fontSize: 18.sp<35?60:18.sp,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: Font.quicksand,
-                                color: Colors.white),
-                          ),
-                          SizedBox(
-                            height:8.sp<12?5:8.sp,
-                          ),
-                          Wrap(
-                            alignment: WrapAlignment.start,
-                              children: [
-                                Image.asset(
-                                  img.trophy,
-                                  width:16.w<40?70:16.w,
-                                  height: 80.h<107?80:80.h,
-                                  fit: BoxFit.fill,
-                                ),
-                                SizedBox(width: 3.w,),
-                                Image.asset(
-                                  img.trophy,
-                                  width:16.w<40?70:16.w,
-                                  height: 80.h<107?80:80.h,
-                                  fit: BoxFit.fill,
-                                ),
-                              ],
-                            ),
-                          SizedBox(
-                            height:8.sp<12?7:8.sp,
-                          ),
-                          Wrap(
-                            alignment: WrapAlignment.start,
-                            direction: Axis.horizontal,
+                      if( MediaQuery.sizeOf(context).width > 920 )
+                        trophies(false),
+                      if( MediaQuery.sizeOf(context).width > 920 )
+                        SizedBox(
+                          height:5.h,
+                        ),
+                      if( MediaQuery.sizeOf(context).width > 920 )
+                      imageAndheart(),
+                      if( MediaQuery.sizeOf(context).width > 920 )
+                      SizedBox(
+                        height:5.h,
+                      ),
+                      BorderCountAccount(
+                        width: MediaQuery.sizeOf(context).width < 920 ? double.infinity : 150.w,
+                        borderWidth: MediaQuery.sizeOf(context).width > 920 ? null : 0,
+                        borderColor: MediaQuery.sizeOf(context).width > 920 ? null : Colors.transparent,
+
+                      ),
+                      if( MediaQuery.sizeOf(context).width < 920 )
+                        Padding(
+                          padding:  EdgeInsets.only(left: 2.w,right: 2.w),
+                          child: Row(
                             children: [
-                              Icon(
-                                IconlyLight.image,
-                                color: Colors.white,
-                                size: 18.5.sp<30?50:18.sp,
-                              ),
-                              SizedBox(
-                                width: 1.w,
-                              ),
-                              Text(
-                                "200",
-                                style: TextStyle(
-                                    fontSize: 15.5.sp<25?35:15.5.sp,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: Font.quicksand,
-                                    color: Colors.white),
-                              ),
-                              SizedBox(
-                                width: 2.w,
-                              ),
-                              SizedBox(
-                                height: 25.h,
-                              ),
-                              Icon(
-                                IconlyLight.heart,
-                                color: Colors.white,
-                                size: 18.5.sp<30?50:18.sp,
-                              ),
-                              SizedBox(
-                                width: 1.w,
-                              ),
-                              Text(
-                                "400",
-                                style: TextStyle(
-                                    fontSize: 15.5.sp<25?35:15.5.sp,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: Font.quicksand,
-                                    color: Colors.white),
-                              )
+                              trophies(true),
+                              Spacer(),
+                              imageAndheart(),
                             ],
                           ),
-                          SizedBox(
-                            height:8.sp<12?5:8.sp,
-                          ),
-                          const BorderCountAccount(),
-                            MaterialButton(onPressed: (){
-                              print(18.5.sp);
-                            })
-                        ],
-                      ),
-                    )
-                  ],
+                        ),
+
+
+
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 20.sp<30?0:20.sp,
-              ),
+              )
             ],
           ),
-          SizedBox(
-            width: MediaQuery.sizeOf(context).width,
-            child: Column(
-              children: [
-                Wrap(
-                  spacing: 15.w,
-                  runSpacing: 3.5.h > 10 ? 3.5.h : 10,
-                  children:
-                      List.generate(6, (index) => TopListAccount(size: size)),
-                ),
-              ],
+          Padding(
+            padding:  EdgeInsets.symmetric(
+              vertical: MediaQuery.sizeOf(context).width > 920 ? 5.h : 0
+            ),
+            child: SizedBox(
+              width: MediaQuery.sizeOf(context).width,
+              child: Column(
+                children: [
+                  Wrap(
+                    spacing: 15.w,
+                    runSpacing: 3.5.h > 10 ? 3.5.h : 10,
+                    children:
+                        List.generate(6, (index) => TopListAccount(size: size)),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Widget trophies(bool vertical) {
+    return  Wrap(
+      alignment: WrapAlignment.start,
+      spacing: 1.w,
+      children: [
+        Container(
+          width: 45 > 10.w ? vertical? 35 : 45 : 10.w,
+          height: 40.h,
+          child: Image.asset(
+            img.trophy,
+          ),
+        ),
+        Container(
+          width: 45 > 10.w ? vertical? 35 : 45 : 10.w,
+          height: 40.h,
+          child: Image.asset(
+            img.trophy,
+          ),
+        ),
+      ],
+    );
+  }
+  Widget imageAndheart () {
+    return  Wrap(
+      alignment: WrapAlignment.start,
+      direction: Axis.horizontal,
+      spacing: 2.w,
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              IconlyLight.image,
+              color: Colors.white,
+              size: 10.w > 30 ? 10.w : 30,
+            ),
+            SizedBox(
+              width: 1.w,
+            ),
+            Text(
+              "200",
+              style: TextStyle(
+                  fontSize: 8.sp > 20 ? 8.sp : 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: Font.quicksand,
+                  color: Colors.white),
+            ),
+          ],
+
+        ),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              IconlyLight.heart,
+              color: Colors.white,
+              size: 10.w > 30 ? 10.w : 30,
+            ),
+            SizedBox(
+              width: 1.w,
+            ),
+            Text(
+              "400",
+              style: TextStyle(
+                  fontSize: 8.sp > 20 ? 8.sp : 20,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: Font.quicksand,
+                  color: Colors.white),
+            )
+          ],
+
+        ),
+      ],
     );
   }
 }
