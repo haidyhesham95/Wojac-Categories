@@ -19,7 +19,7 @@ class TopContButton extends StatelessWidget {
           color: backgroundColor,
             border: Border.all(
                 color: Colors.white,
-                width: 2
+                width: 1
             ),
           borderRadius: BorderRadius.all(Radius.circular(5))
         ),

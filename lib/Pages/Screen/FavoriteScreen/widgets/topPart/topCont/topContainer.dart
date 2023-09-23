@@ -16,16 +16,15 @@ class TopContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-
       child: Container(
         width: width,
         height: 120,
        // color: Colors.blue,
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: EdgeInsets.only(left: 20, top: 30),
         child: Column(
           children: [
            TopContTitle(
-               title: "Favorite",
+               title: "Favorites",
              icon: CustomAnimatedWidget(
                count: 2,
                animationType: AnimationType.specificCount,
@@ -38,6 +37,8 @@ class TopContainer extends StatelessWidget {
              ),
              //Icon(Icons.heart_broken, color: Colors.red, size: 50,)),
            ),
+
+            SizedBox(height: 10,),
             TopButtons()
           ],
         ),

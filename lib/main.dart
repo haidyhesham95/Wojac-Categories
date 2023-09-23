@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignIn/SignIn.dart';
 import 'package:wojac_app/Pages/Screen/Auth/SignUp/SignUp.dart';
 import 'package:wojac_app/Pages/Screen/Details/Details.dart';
+import 'package:wojac_app/Pages/Screen/FavoriteScreen/favoriteScreen.dart';
 import 'package:wojac_app/Pages/Screen/Top_Screen/Top_Screen.dart';
 
 
@@ -46,20 +47,24 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
             theme: ThemeData(
               scaffoldBackgroundColor: kGround,
-                scrollbarTheme: ScrollbarThemeData(
-                    thumbColor: MaterialStateProperty.all(kWhite)
+
+            scrollbarTheme: ScrollbarThemeData(
+            thumbColor: MaterialStateProperty.all(kWhite)
 
 
-                ),
-              textTheme: GoogleFonts.quicksandTextTheme(
-                Theme.of(context).textTheme
-              )
+        ),
+        textTheme: GoogleFonts.quicksandTextTheme(
+        Theme.of(context).textTheme
+        )
+
 
             ),
+        debugShowCheckedModeBanner: false,
+        home: Account(),
 
-            debugShowCheckedModeBanner: false,
-            home: Account(),
+
         );
+
       },
     );
   }

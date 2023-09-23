@@ -11,28 +11,26 @@ class TopButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: Container(
-        child: Row(
-          children: [
-            TopContButton(
-              title: "Designer",
-              backgroundColor: kgreen,
-              onPressed: (){
-                print("designer button clicked");
-                Navigator.push(context, MaterialPageRoute(builder: (context) => TopScreen(),));
-              },
-            ),
-            SizedBox(width: 10,),
-            TopContButton(
-              title: "Wojacs",
-              onPressed: (){
-                print("Wojacs button clicked");
-                Navigator.push(context, MaterialPageRoute(builder: (context) => FavoriteScreen(),));
-              },
-            )
-          ],
-        ),
+    return  Container(
+      child: Row(
+        children: [
+          TopContButton(
+            title: "Designer",
+            backgroundColor: kgreen,
+            onPressed: (){
+              print("designer button clicked");
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TopScreen(),));
+            },
+          ),
+          SizedBox(width: 10,),
+          TopContButton(
+            title: "Wojacs",
+            onPressed: (){
+              print("Wojacs button clicked");
+              Navigator.push(context, MaterialPageRoute(builder: (context) => FavoriteScreen(),));
+            },
+          )
+        ],
       ),
     );
   }

@@ -9,14 +9,12 @@ class TopContTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Expanded(
-      child: Row(
-        children: [
-          Text(title, style: Styles.textStyle20.copyWith(fontSize: 40),),
-          SizedBox(width: 10,),
-          icon
-        ],
-      ),
+    return  Row(
+      children: [
+        Text(title, style: Styles.textStyle20.copyWith(fontSize: 50, fontWeight: FontWeight.bold),),
+        SizedBox(width: 10,),
+        icon
+      ],
     );
   }
 }
